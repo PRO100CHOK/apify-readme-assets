@@ -1,0 +1,30 @@
+{
+ "actor": "meta-ads-library-scraper",
+ "accent": "#0866FF",
+ "accent2": "#E1306C",
+ "eyebrow": [
+  "META AD LIBRARY",
+  "AD SPY"
+ ],
+ "headline": [
+  "EVERY AD.",
+  "EVERY CREATIVE.",
+  "AS JSON."
+ ],
+ "lede": "Scrape the Meta Ad Library by <b>keyword, Facebook page or ad archive ID</b> — up to <i>39 flat fields per ad</i>: creatives, ad copy, video URLs, CTA type, platforms, run dates and page data. <u>Facebook, Instagram, Messenger, Audience Network and Threads.</u>",
+ "pill": "39 FIELDS / AD * VIDEO + IMAGE URLS",
+ "code": [
+  "// scrapeType: \"search\" · one flat item per ad",
+  "{",
+  ">  \"adArchiveId\": \"1677230640306960\", \"pageName\": \"Amazon Fashion\",",
+  ">  \"pageId\": \"151871258163795\", \"pageLikeCount\": 4214242,",
+  "  \"pageCategories\": [\"Clothing (Brand)\"], \"pageIsDeleted\": false,",
+  ">  \"adContent\": \"Fits that go the distance and level up your A-game.\",",
+  "  \"adTitle\": \"Amazon Fashion\", \"adLinkCaption\": \"amazon.com\",",
+  ">  \"adCallToActionType\": \"SHOP_NOW\", \"adFormat\": \"dpa\",",
+  "  \"adLinkUrl\": \"https://www.amazon.com/b?node=210992350011&...\",",
+  "  \"imageUrls\": [\"https://scontent-phx1-1.xx.fbcdn.net/...\"],",
+  "  \"adLibraryUrl\": \"https://www.facebook.com/ads/library/?id=1677230640306960\"",
+  "}"
+ ]
+}

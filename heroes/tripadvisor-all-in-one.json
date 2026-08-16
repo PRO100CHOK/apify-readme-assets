@@ -1,0 +1,30 @@
+{
+ "actor": "tripadvisor-all-in-one",
+ "accent": "#34E0A1",
+ "accent2": "#2D74FF",
+ "eyebrow": [
+  "TRIPADVISOR",
+  "HOTELS + FOOD"
+ ],
+ "headline": [
+  "EVERY HOTEL.",
+  "EVERY REVIEW.",
+  "AS JSON."
+ ],
+ "lede": "Paste a TripAdvisor URL, type a keyword, or just name a city — the Actor finds the places and <b>embeds each place's reviews inside its own record</b>. <i>Prices from every booking provider, deals and special offers.</i> <u>No login, no TripAdvisor API key, no proxies to configure.</u>",
+ "pill": "HOTELS * RESTAURANTS * NESTED REVIEWS",
+ "code": [
+  "// category: \"hotels\" · reviews embedded in each place",
+  "{",
+  ">  \"__type\": \"hotel\", \"locationId\": 250927,",
+  ">  \"name\": \"Hotel Europe Saint Severin\", \"accommodationType\": \"Hotel\",",
+  "  \"description\": \"Friendly and comfortable property in the Latin quarter...\",",
+  ">  \"priceRangeMin\": 149, \"priceRangeMax\": 320, \"finalPrice\": \"$221\",",
+  ">  \"dealsCount\": 11, \"specialOffer\": \"BOOK DIRECT & SAVE 15%\",",
+  "  \"bookingProvider\": \"all.accor.com\",",
+  "  \"offers\": [{ \"provider\": \"Hotels.com\", \"displayPrice\": \"$221\",",
+  "    \"basePrice\": 221, \"currency\": \"USD\", \"isSupplierDirect\": false }, ... ],",
+  ">  \"reviews\": [{ \"rating\": 5, \"title\": \"...\", \"text\": \"...\" }, ... ]",
+  "}   // + restaurants, attractions"
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "actor": "threads-scraper-usage",
+ "accent": "#8B5CF6",
+ "accent2": "#E1306C",
+ "eyebrow": [
+  "THREADS.NET",
+  "POSTS + PROFILES"
+ ],
+ "headline": [
+  "EVERY POST.",
+  "EVERY PROFILE.",
+  "AS JSON."
+ ],
+ "lede": "<b>Posts, user profiles, follower and following lists and search results</b> from Threads.net at scale. <i>Likes, replies, reposts, quotes and shares</i> on every post, linked Instagram account on every profile, and <u>emails and URLs extracted straight out of post text.</u>",
+ "pill": "POSTS * PROFILES * FOLLOWERS * SEARCH",
+ "code": [
+  "// action: \"user_posts\" · one item per post",
+  "{",
+  ">  \"post_id\": \"3578921456789012345\", \"code\": \"DVp9LrHAjHq\",",
+  "  \"text\": \"Just launched our new Python library for data processing...\",",
+  ">  \"username\": \"techdev\", \"full_name\": \"Tech Developer\", \"is_verified\": true,",
+  ">  \"like_count\": 245, \"reply_count\": 32, \"repost_count\": 18,",
+  "  \"quote_count\": 5, \"reshare_count\": 12, \"is_reply\": false,",
+  "  \"taken_at\": 1710000000, \"media_type\": 19, \"images\": [],",
+  ">  \"emails_in_text\": [\"hello@techdev.com\"],",
+  "  \"urls_in_text\": [\"https://github.com/techdev/library\"]",
+  "}"
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "actor": "tiktok-profile-pro",
+ "accent": "#FE2C55",
+ "accent2": "#25F4EE",
+ "eyebrow": [
+  "TIKTOK",
+  "PROFILE API"
+ ],
+ "headline": [
+  "EVERY PROFILE.",
+  "EVERY VIDEO.",
+  "AS JSON."
+ ],
+ "lede": "TikTok has no open official API. This Actor is an <b>unofficial TikTok profile API</b>: follower, heart and video counts, the profile's <i>videos, reposts and liked videos</i> with full play/like/comment/share stats, plus <u>emails and links pulled from the bio</u> and engagement analytics.",
+ "pill": "BIO CONTACTS * VIDEOS * ANALYTICS",
+ "code": [
+  "// one dataset item per profile",
+  "{",
+  ">  \"username\": \"psiho.kisa\", \"nickname\": \"Кисы\", \"verified\": false,",
+  ">  \"followerCount\": 326901, \"heartCount\": 16800000, \"videoCount\": 121,",
+  "  \"signature\": \"ДРУГ КИСА · 4-5\", \"region\": \"RU\", \"bioLink\": null,",
+  "  \"avatar\": { \"thumb\": \"https://...\", \"large\": \"https://...\" },",
+  "  \"videos\": [{",
+  ">    \"id\": \"7625229188693232918\", \"duration\": 76, \"createTime\": 1775387026,",
+  ">    \"playCount\": 2000000, \"diggCount\": 156500, \"commentCount\": 612,",
+  ">    \"shareCount\": 10700, \"collectCount\": 13818",
+  "  }, ... ],",
+  "  \"contacts\": { ... },   // extractContacts: true",
+  "  \"analytics\": { ... }   // computeAnalytics: true",
+  "}"
+ ]
+}

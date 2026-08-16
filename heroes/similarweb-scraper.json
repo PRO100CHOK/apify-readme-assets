@@ -1,0 +1,31 @@
+{
+ "actor": "similarweb-scraper",
+ "accent": "#00C7A9",
+ "accent2": "#2D74FF",
+ "eyebrow": [
+  "SIMILARWEB",
+  "3 SOURCES"
+ ],
+ "headline": [
+  "EVERY VISIT.",
+  "EVERY RANK.",
+  "AS JSON."
+ ],
+ "lede": "<b>Traffic estimates, global and country rank, engagement, traffic sources and top countries</b> for any domain — plus <i>similar-sites discovery and AITDK domain intelligence</i> with WHOIS and keyword density. <u>Up to 50 domains per run.</u>",
+ "pill": "3 SOURCES * 50 DOMAINS / RUN * NO LOGIN",
+ "code": [
+  "// searchType: \"similarweb\" · one item per domain",
+  "{",
+  ">  \"SiteName\": \"google.com\", \"Title\": \"Google\",",
+  "  \"Category\": \"computers_electronics_and_technology/search_engines\",",
+  ">  \"GlobalRank\": { \"Rank\": 1 }, \"CountryRank\": { \"CountryCode\": \"US\", \"Rank\": 1 },",
+  "  \"Engagments\": {",
+  ">    \"Visits\": 85756574615, \"VisitsFormatted\": \"85.76B\",",
+  ">    \"BounceRate\": 28.36, \"PagePerVisit\": 8.52, \"TimeOnSite\": 610 },",
+  "  \"EstimatedMonthlyVisits\": { \"2025-12-01\": 84172772881, ... },",
+  ">  \"TrafficSources\": { \"Direct\": 85.83, \"Search\": 8.35,",
+  ">    \"Referrals\": 4.46, \"Social\": 0.76, \"Paid Referrals\": 0.33 },",
+  "  \"TopCountryShares\": [{ \"CountryCode\": \"US\", \"Value\": 24.59 }, ... ]",
+  "}   // + similar_sites and aitdk search types"
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "actor": "trustpilot-all-in-one-scraper",
+ "accent": "#00B67A",
+ "accent2": "#2D74FF",
+ "eyebrow": [
+  "TRUSTPILOT",
+  "6 MODES"
+ ],
+ "headline": [
+  "EVERY REVIEW.",
+  "EVERY COMPANY.",
+  "AS JSON."
+ ],
+ "lede": "<b>Reviews (up to 40 fields), company profiles (50+ fields), transparency analytics, search, categories and reviewer profiles</b> — six modes in one Actor. <i>More than 200 reviews per company</i>, nested straight inside the company record. <u>No login, no Trustpilot API key, no proxies to configure.</u>",
+ "pill": "6 MODES * 40 FIELDS / REVIEW * NO LOGIN",
+ "code": [
+  "// dataType: \"company\" · reviews nested in the company record",
+  "{",
+  ">  \"companyName\": \"Nike\", \"companyDomain\": \"www.nike.com\",",
+  ">  \"trustScore\": 1.6, \"stars\": 1.5, \"numberOfReviews\": 12692,",
+  "  \"primaryCategory\": \"Activewear Store\", \"reviewsCount\": 200,",
+  "  \"transparency\": { \"ratingOneStar\": 9598, \"ratingFiveStars\": 1797,",
+  "    \"replyPercentage\": 0 },",
+  "  \"reviews\": [{",
+  ">    \"reviewTitle\": \"Disgusting customer service\", \"rating\": 1,",
+  ">    \"reviewText\": \"On May 25 I bought my customized jersey ...\",",
+  "    \"language\": \"en\", \"isVerified\": false, \"reviewSource\": \"Organic\",",
+  ">    \"publishedDate\": \"2026-06-12T18:55:37.000Z\", \"likes\": 0,",
+  "    \"reviewerName\": \"...\", \"reviewerId\": \"6a2c3953e33cd10be89f2ef1\"",
+  "  }, ... 199 more]",
+  "}"
+ ]
+}

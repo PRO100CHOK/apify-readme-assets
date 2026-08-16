@@ -1,0 +1,30 @@
+{
+ "actor": "youtube-scraper-all-in-one",
+ "accent": "#FF0033",
+ "accent2": "#FF8A00",
+ "eyebrow": [
+  "YOUTUBE",
+  "7 MODES"
+ ],
+ "headline": [
+  "EVERY VIDEO.",
+  "EVERY TRANSCRIPT.",
+  "AS JSON."
+ ],
+ "lede": "<b>Videos, channels, search, Shorts, comments, transcripts and playlists</b> — seven modes, <i>no API key and no quota</i>. 30+ fields per video, captions in every available language, channel emails and socials. <u>From $2 per 1,000 videos on paid plans.</u>",
+ "pill": "7 MODES * TRANSCRIPTS * NO API KEY",
+ "code": [
+  "// searchType: \"video\" · 30+ fields per video",
+  "{",
+  ">  \"id\": \"dQw4w9WgXcQ\", \"title\": \"Rick Astley - Never Gonna Give You Up\",",
+  ">  \"viewCount\": 1780016266, \"likes\": 19140845, \"commentsCount\": 2400000,",
+  "  \"durationSeconds\": 213, \"publishDate\": \"2009-10-25\",",
+  ">  \"channelName\": \"Rick Astley\", \"numberOfSubscribers\": 4500000,",
+  "  \"channelId\": \"UCuAXFkgsw1L7xaCfnd5JJOw\",",
+  "  \"hashtags\": [\"#RickAstley\", \"#NeverGonnaGiveYouUp\"],",
+  ">  \"availableCaptions\": [\"en\", \"de-DE\", \"ja\", \"pt-BR\", \"es-419\"],",
+  "  \"thumbnailUrl\": \"https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg\"",
+  "}",
+  "// + channel, search, shorts, comments, transcript, playlist"
+ ]
+}

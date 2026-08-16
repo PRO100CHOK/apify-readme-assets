@@ -1,0 +1,32 @@
+{
+ "actor": "google-maps-scraper",
+ "accent": "#EA4335",
+ "accent2": "#34A853",
+ "eyebrow": [
+  "GOOGLE MAPS",
+  "LOCAL LEADS"
+ ],
+ "headline": [
+  "EVERY PLACE.",
+  "EVERY EMAIL.",
+  "AS JSON."
+ ],
+ "lede": "Build a lead list of any local business in any city — <b>name, category, address, phone, website, rating, reviews, photos and opening hours</b> — with the <i>owner's email already extracted from their website</i> plus Facebook, Instagram and X profiles. <u>No login, no Google API key.</u>",
+ "pill": "PLACES * EMAILS * REVIEWS * PHOTOS",
+ "code": [
+  "// one dataset item per place",
+  "{",
+  ">  \"name\": \"Scissors & Scotch\", \"category\": \"Barber shop\",",
+  "  \"address\": \"331 N St NE, Washington, DC 20002, USA\",",
+  "  \"city\": \"Washington\", \"state\": \"DC\", \"zip_code\": \"20002\",",
+  ">  \"phone\": \"(202) 481-2850\", \"website\": \"https://scissorsscotch.com/\",",
+  ">  \"emails\": [\"info@scissorsscotch.com\", \"dc@scissorsscotch.com\"],",
+  ">  \"facebook\": \"https://www.facebook.com/scissorsscotch\",",
+  "  \"instagram\": \"https://www.instagram.com/scissorsscotch/\",",
+  ">  \"rating\": 4.7, \"reviews_count\": 1422, \"price_level\": \"$$\",",
+  "  \"latitude\": 38.9068, \"longitude\": -77.001, \"plus_code\": \"WX4X+PH\",",
+  "  \"opening_hours\": \"Monday: 9 AM-8 PM | Tuesday: 9 AM-8 PM | ...\",",
+  "  \"reviews\": [{ \"rating\": 5, \"text\": \"Best haircut in DC...\" }, ... ]",
+  "}"
+ ]
+}

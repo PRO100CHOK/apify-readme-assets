@@ -1,0 +1,94 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:760px; }
+  body { background:#08090B; font-family:"Helvetica Neue", Arial, "Segoe UI", sans-serif;
+         -webkit-font-smoothing:antialiased; position:relative; overflow:hidden; }
+  .grid { position:absolute; inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+                     linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+    background-size:38px 38px; }
+  .glow { position:absolute; top:-190px; left:-170px; width:660px; height:560px;
+    background:radial-gradient(closest-side, #E6002338, #E6002300); }
+  .glow2 { position:absolute; top:230px; right:-220px; width:540px; height:480px;
+    background:radial-gradient(closest-side, #FF8A001E, #FF8A0000); }
+  .wrap { position:relative; padding:44px 45px 46px; }
+
+  .eyebrow { display:flex; align-items:center; gap:11px; margin-bottom:22px; }
+  .dot { width:9px; height:9px; border-radius:50%; background:#E60023;
+         box-shadow:0 0 14px 3px #E60023A6; }
+  .eyebrow span { font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13px; font-weight:700; letter-spacing:.20em; color:#E60023; }
+  .eyebrow span em { font-style:normal; color:#6E7681; }
+
+  h1 { line-height:.94; letter-spacing:-.035em; font-weight:800; }
+  h1 div { font-size:59px; }
+  .l1 { color:#FFFFFF; } .l2 { color:#E60023; } .l3 { color:#6E7681; }
+
+  p.lede { margin-top:28px; font-size:17.5px; line-height:1.52; color:#C9CDD3; max-width:655px; }
+  p.lede b { color:#FFFFFF; font-weight:700; }
+  p.lede i { font-style:normal; color:#E60023; font-weight:700; }
+  p.lede u { text-decoration:none; color:#FF8A00; font-weight:700; }
+
+  .badges { margin-top:30px; display:flex; align-items:center; gap:16px; }
+  .pill { border:1px solid #E6002373; border-radius:999px; padding:9px 18px;
+    font-family:"Cascadia Mono", Consolas, monospace; font-size:12px; font-weight:700;
+    letter-spacing:.11em; color:#E60023; background:#E6002312; }
+  .runs { font-family:"Cascadia Mono", Consolas, monospace; font-size:12px;
+    letter-spacing:.11em; color:#6E7681; }
+  .runs b { color:#E6E8EB; } .sep { color:#3A3F46; }
+
+  .term { margin-top:42px; border:1px solid #23262B; border-radius:12px;
+    background:#0C0E11; overflow:hidden; }
+  .bar { display:flex; align-items:center; gap:9px; padding:12px 16px;
+    border-bottom:1px solid #1B1E23; background:#101317; }
+  .b { width:11px; height:11px; border-radius:50%; }
+  .b1{background:#FF5F57} .b2{background:#FEBC2E} .b3{background:#28C840}
+  .path { margin-left:9px; font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:12.5px; letter-spacing:.05em; color:#6E7681; }
+  .live { margin-left:auto; display:flex; align-items:center; gap:6px;
+    border:1px solid rgba(40,200,64,.35); border-radius:999px; padding:4px 11px;
+    background:rgba(40,200,64,.08); font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:10.5px; font-weight:700; letter-spacing:.11em; color:#28C840; }
+  .live .d { width:6px; height:6px; border-radius:50%; background:#28C840; }
+
+  pre { padding:18px 20px 20px; font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13.2px; line-height:1.76; color:#C9CDD3; white-space:normal; }
+  /* every source line is its own block, so no stray blank rows */
+  .ln { display:block; white-space:pre; }
+  .hl { background:#E600231C; box-shadow:inset 3px 0 0 #E60023; margin:0 -20px;
+        padding:0 20px 0 17px; }
+  .c { color:#5A616B; } .k { color:#79C0FF; } .s { color:#7EE787; }
+  .n { color:#FFA657; } .p { color:#8B949E; }
+</style></head>
+<body>
+  <div class="grid"></div><div class="glow"></div><div class="glow2"></div>
+  <div class="wrap">
+    <div class="eyebrow"><div class="dot"></div>
+      <span>PINTEREST <em>/</em> 7 MODES</span></div>
+    <h1><div class="l1">EVERY PIN.</div><div class="l2">EVERY BOARD.</div><div class="l3">AS JSON.</div></h1>
+    <p class="lede"><b>Search, pin details, profiles, user pins, boards, board sections and related pins</b> — seven modes, <i>no login and no Pinterest API key</i>. Image, GIF and video pins detected automatically with every resolution URL. <u>From $1 per 1,000 pins on paid plans.</u></p>
+    <div class="badges">
+      <div class="pill">7 MODES &bull; NO LOGIN &bull; ALL PIN MEDIA</div><div class="sep">&bull;</div>
+      <div class="runs">RUNS ON <b>APIFY</b></div>
+    </div>
+    <div class="term">
+      <div class="bar">
+        <div class="b b1"></div><div class="b b2"></div><div class="b b3"></div>
+        <div class="path">~/pinterest-scraper-all-in-one</div>
+        <div class="live"><div class="d"></div>LIVE</div>
+      </div>
+      <pre><span class="ln"><span class="c">// scrapeType: &quot;search&quot; · one item per pin</span></span
+        ><span class="ln"><span class="p">{</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;dataType&quot;</span><span class="p">: </span><span class="s">&quot;pin&quot;</span><span class="p">, </span><span class="k">&quot;id&quot;</span><span class="p">: </span><span class="s">&quot;1234567890&quot;</span><span class="p">, </span><span class="k">&quot;title&quot;</span><span class="p">: </span><span class="s">&quot;Minimal home office&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;description&quot;</span><span class="p">: </span><span class="s">&quot;A clean desk setup with warm wood tones...&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;images&quot;</span><span class="p">: { </span><span class="k">&quot;170x&quot;</span><span class="p">: </span><span class="s">&quot;...&quot;</span><span class="p">, </span><span class="k">&quot;236x&quot;</span><span class="p">: </span><span class="s">&quot;...&quot;</span><span class="p">, </span><span class="k">&quot;474x&quot;</span><span class="p">: </span><span class="s">&quot;...&quot;</span><span class="p">, </span><span class="k">&quot;736x&quot;</span><span class="p">: </span><span class="s">&quot;...&quot;</span><span class="p">, </span><span class="k">&quot;orig&quot;</span><span class="p">: </span><span class="s">&quot;...&quot;</span><span class="p"> },</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;media_type&quot;</span><span class="p">: </span><span class="s">&quot;image&quot;</span><span class="p">, </span><span class="k">&quot;is_video&quot;</span><span class="p">: </span><span class="n">false</span><span class="p">, </span><span class="k">&quot;dominant_color&quot;</span><span class="p">: </span><span class="s">&quot;#d9c7b8&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;repin_count&quot;</span><span class="p">: </span><span class="n">4210</span><span class="p">, </span><span class="k">&quot;comment_count&quot;</span><span class="p">: </span><span class="n">18</span><span class="p">, </span><span class="k">&quot;reaction_count&quot;</span><span class="p">: </span><span class="n">312</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;link&quot;</span><span class="p">: </span><span class="s">&quot;https://example.com/article&quot;</span><span class="p">, </span><span class="k">&quot;domain&quot;</span><span class="p">: </span><span class="s">&quot;example.com&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;pinner_username&quot;</span><span class="p">: </span><span class="s">&quot;studio.nord&quot;</span><span class="p">, </span><span class="k">&quot;pinner_followers&quot;</span><span class="p">: </span><span class="n">58200</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;board_name&quot;</span><span class="p">: </span><span class="s">&quot;Workspaces&quot;</span><span class="p">, </span><span class="k">&quot;board_url&quot;</span><span class="p">: </span><span class="s">&quot;https://www.pinterest.com/...&quot;</span></span
+        ><span class="ln"><span class="p">}</span></span></pre>
+    </div>
+  </div>
+</body></html>

@@ -1,0 +1,29 @@
+{
+ "actor": "reddit-scraper-all-in-one",
+ "accent": "#FF4500",
+ "accent2": "#FFB000",
+ "eyebrow": [
+  "REDDIT",
+  "5 MODES"
+ ],
+ "headline": [
+  "EVERY POST.",
+  "EVERY COMMENT.",
+  "AS JSON."
+ ],
+ "lede": "Reddit's official API wants app registration, OAuth and — above small volumes — money. This Actor is an <b>unofficial Reddit API alternative</b>: search, subreddits, single posts, users and any Reddit URL. <i>Comment trees, scores, flairs and awards</i>, plus <u>emails found in posts and profiles.</u>",
+ "pill": "5 MODES * COMMENT TREES * NO OAUTH",
+ "code": [
+  "// scrapeType: \"search\" · one item per post",
+  "{",
+  ">  \"type\": \"post\", \"id\": \"1kx9q2z\", \"community\": \"r/Entrepreneur\",",
+  ">  \"title\": \"How I got my first 100 customers\", \"author\": \"startup_founder\",",
+  "  \"body\": \"Long story short: I stopped building and started talking...\",",
+  ">  \"score\": 1543, \"upvoteRatio\": 0.97, \"numberOfComments\": 218,",
+  "  \"createdAt\": \"2026-05-20T14:08:11+00:00\", \"flair\": \"Case Study\",",
+  "  \"isNsfw\": false, \"isSelf\": true, \"totalAwards\": 3,",
+  "  \"url\": \"https://www.reddit.com/r/Entrepreneur/comments/1kx9q2z/...\"",
+  "}",
+  "// + subreddit, post (with comment tree), user, url modes"
+ ]
+}

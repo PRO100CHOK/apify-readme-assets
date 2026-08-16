@@ -1,0 +1,97 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:760px; }
+  body { background:#08090B; font-family:"Helvetica Neue", Arial, "Segoe UI", sans-serif;
+         -webkit-font-smoothing:antialiased; position:relative; overflow:hidden; }
+  .grid { position:absolute; inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+                     linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+    background-size:38px 38px; }
+  .glow { position:absolute; top:-190px; left:-170px; width:660px; height:560px;
+    background:radial-gradient(closest-side, #EA433538, #EA433500); }
+  .glow2 { position:absolute; top:230px; right:-220px; width:540px; height:480px;
+    background:radial-gradient(closest-side, #34A8531E, #34A85300); }
+  .wrap { position:relative; padding:44px 45px 46px; }
+
+  .eyebrow { display:flex; align-items:center; gap:11px; margin-bottom:22px; }
+  .dot { width:9px; height:9px; border-radius:50%; background:#EA4335;
+         box-shadow:0 0 14px 3px #EA4335A6; }
+  .eyebrow span { font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13px; font-weight:700; letter-spacing:.20em; color:#EA4335; }
+  .eyebrow span em { font-style:normal; color:#6E7681; }
+
+  h1 { line-height:.94; letter-spacing:-.035em; font-weight:800; }
+  h1 div { font-size:59px; }
+  .l1 { color:#FFFFFF; } .l2 { color:#EA4335; } .l3 { color:#6E7681; }
+
+  p.lede { margin-top:28px; font-size:17.5px; line-height:1.52; color:#C9CDD3; max-width:655px; }
+  p.lede b { color:#FFFFFF; font-weight:700; }
+  p.lede i { font-style:normal; color:#EA4335; font-weight:700; }
+  p.lede u { text-decoration:none; color:#34A853; font-weight:700; }
+
+  .badges { margin-top:30px; display:flex; align-items:center; gap:16px; }
+  .pill { border:1px solid #EA433573; border-radius:999px; padding:9px 18px;
+    font-family:"Cascadia Mono", Consolas, monospace; font-size:12px; font-weight:700;
+    letter-spacing:.11em; color:#EA4335; background:#EA433512; }
+  .runs { font-family:"Cascadia Mono", Consolas, monospace; font-size:12px;
+    letter-spacing:.11em; color:#6E7681; }
+  .runs b { color:#E6E8EB; } .sep { color:#3A3F46; }
+
+  .term { margin-top:42px; border:1px solid #23262B; border-radius:12px;
+    background:#0C0E11; overflow:hidden; }
+  .bar { display:flex; align-items:center; gap:9px; padding:12px 16px;
+    border-bottom:1px solid #1B1E23; background:#101317; }
+  .b { width:11px; height:11px; border-radius:50%; }
+  .b1{background:#FF5F57} .b2{background:#FEBC2E} .b3{background:#28C840}
+  .path { margin-left:9px; font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:12.5px; letter-spacing:.05em; color:#6E7681; }
+  .live { margin-left:auto; display:flex; align-items:center; gap:6px;
+    border:1px solid rgba(40,200,64,.35); border-radius:999px; padding:4px 11px;
+    background:rgba(40,200,64,.08); font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:10.5px; font-weight:700; letter-spacing:.11em; color:#28C840; }
+  .live .d { width:6px; height:6px; border-radius:50%; background:#28C840; }
+
+  pre { padding:18px 20px 20px; font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13.2px; line-height:1.76; color:#C9CDD3; white-space:normal; }
+  /* every source line is its own block, so no stray blank rows */
+  .ln { display:block; white-space:pre; }
+  .hl { background:#EA43351C; box-shadow:inset 3px 0 0 #EA4335; margin:0 -20px;
+        padding:0 20px 0 17px; }
+  .c { color:#5A616B; } .k { color:#79C0FF; } .s { color:#7EE787; }
+  .n { color:#FFA657; } .p { color:#8B949E; }
+</style></head>
+<body>
+  <div class="grid"></div><div class="glow"></div><div class="glow2"></div>
+  <div class="wrap">
+    <div class="eyebrow"><div class="dot"></div>
+      <span>GOOGLE MAPS <em>/</em> LOCAL LEADS</span></div>
+    <h1><div class="l1">EVERY PLACE.</div><div class="l2">EVERY EMAIL.</div><div class="l3">AS JSON.</div></h1>
+    <p class="lede">Build a lead list of any local business in any city — <b>name, category, address, phone, website, rating, reviews, photos and opening hours</b> — with the <i>owner's email already extracted from their website</i> plus Facebook, Instagram and X profiles. <u>No login, no Google API key.</u></p>
+    <div class="badges">
+      <div class="pill">PLACES &bull; EMAILS &bull; REVIEWS &bull; PHOTOS</div><div class="sep">&bull;</div>
+      <div class="runs">RUNS ON <b>APIFY</b></div>
+    </div>
+    <div class="term">
+      <div class="bar">
+        <div class="b b1"></div><div class="b b2"></div><div class="b b3"></div>
+        <div class="path">~/google-maps-scraper</div>
+        <div class="live"><div class="d"></div>LIVE</div>
+      </div>
+      <pre><span class="ln"><span class="c">// one dataset item per place</span></span
+        ><span class="ln"><span class="p">{</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;name&quot;</span><span class="p">: </span><span class="s">&quot;Scissors &amp; Scotch&quot;</span><span class="p">, </span><span class="k">&quot;category&quot;</span><span class="p">: </span><span class="s">&quot;Barber shop&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;address&quot;</span><span class="p">: </span><span class="s">&quot;331 N St NE, Washington, DC 20002, USA&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;city&quot;</span><span class="p">: </span><span class="s">&quot;Washington&quot;</span><span class="p">, </span><span class="k">&quot;state&quot;</span><span class="p">: </span><span class="s">&quot;DC&quot;</span><span class="p">, </span><span class="k">&quot;zip_code&quot;</span><span class="p">: </span><span class="s">&quot;20002&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;phone&quot;</span><span class="p">: </span><span class="s">&quot;(202) 481-2850&quot;</span><span class="p">, </span><span class="k">&quot;website&quot;</span><span class="p">: </span><span class="s">&quot;https://scissorsscotch.com/&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;emails&quot;</span><span class="p">: [</span><span class="s">&quot;info@scissorsscotch.com&quot;</span><span class="p">, </span><span class="s">&quot;dc@scissorsscotch.com&quot;</span><span class="p">],</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;facebook&quot;</span><span class="p">: </span><span class="s">&quot;https://www.facebook.com/scissorsscotch&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;instagram&quot;</span><span class="p">: </span><span class="s">&quot;https://www.instagram.com/scissorsscotch/&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;rating&quot;</span><span class="p">: </span><span class="n">4.7</span><span class="p">, </span><span class="k">&quot;reviews_count&quot;</span><span class="p">: </span><span class="n">1422</span><span class="p">, </span><span class="k">&quot;price_level&quot;</span><span class="p">: </span><span class="s">&quot;$$&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;latitude&quot;</span><span class="p">: </span><span class="n">38.9068</span><span class="p">, </span><span class="k">&quot;longitude&quot;</span><span class="p">: </span><span class="n">-77.001</span><span class="p">, </span><span class="k">&quot;plus_code&quot;</span><span class="p">: </span><span class="s">&quot;WX4X+PH&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;opening_hours&quot;</span><span class="p">: </span><span class="s">&quot;Monday: 9 AM-8 PM | Tuesday: 9 AM-8 PM | ...&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;reviews&quot;</span><span class="p">: [{ </span><span class="k">&quot;rating&quot;</span><span class="p">: </span><span class="n">5</span><span class="p">, </span><span class="k">&quot;text&quot;</span><span class="p">: </span><span class="s">&quot;Best haircut in DC...&quot;</span><span class="p"> }, ... ]</span></span
+        ><span class="ln"><span class="p">}</span></span></pre>
+    </div>
+  </div>
+</body></html>

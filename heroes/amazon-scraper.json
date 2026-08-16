@@ -1,0 +1,31 @@
+{
+ "actor": "amazon-scraper",
+ "accent": "#FF9900",
+ "accent2": "#2D74FF",
+ "eyebrow": [
+  "AMAZON",
+  "6 MODES"
+ ],
+ "headline": [
+  "EVERY PRODUCT.",
+  "EVERY REVIEW.",
+  "AS JSON."
+ ],
+ "lede": "<b>Product details, search, Best-Sellers categories, customer reviews, seller profiles and buy-box offers</b> — six scrape modes across <i>19 Amazon marketplaces</i>. Price, list price, stars breakdown, stock, features and images on every product. <u>Pay per event, no subscription.</u>",
+ "pill": "6 MODES * 19 MARKETPLACES",
+ "code": [
+  "// scrapeType: \"product\" · one item per ASIN",
+  "{",
+  ">  \"asin\": \"B0BDHWDR12\", \"brand\": \"Apple\",",
+  ">  \"title\": \"Apple AirPods Pro (2nd Gen) Wireless Earbuds...\",",
+  ">  \"price\": 258.54, \"listPrice\": 299.0, \"discountPercent\": \"-14%\",",
+  "  \"currency\": \"$\", \"inStock\": true, \"inStockText\": \"In Stock\",",
+  ">  \"stars\": 4.7, \"reviewsCount\": 57949,",
+  "  \"starsBreakdown\": { \"5 star\": \"87%\", \"4 star\": \"8%\", \"3 star\": \"2%\",",
+  "    \"2 star\": \"0%\", \"1 star\": \"3%\" },",
+  "  \"features\": [\"RICHER AUDIO EXPERIENCE - the Apple H2 chip...\", ... ],",
+  "  \"images\": [\"https://m.media-amazon.com/images/I/61SUj2...\"]",
+  "}",
+  "// + search, category, reviews, seller, offers"
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "actor": "g2-scraper",
+ "accent": "#FF492C",
+ "accent2": "#2D74FF",
+ "eyebrow": [
+  "G2.COM",
+  "5 MODES"
+ ],
+ "headline": [
+  "EVERY REVIEW.",
+  "EVERY COMPETITOR.",
+  "AS JSON."
+ ],
+ "lede": "G2's official API is enterprise-only — a sales call before you see a single row. This Actor is an <b>unofficial G2 API</b>: reviews, product profiles, category listings, alternatives and the category directory. <i>Reviewer job title, industry, company segment and size on every review.</i> <u>More than 100 reviews per product.</u>",
+ "pill": "5 MODES * REVIEWER FIRMOGRAPHICS",
+ "code": [
+  "// scrapeType: \"reviews\" · one item per review",
+  "{",
+  ">  \"type\": \"review\", \"reviewId\": 13183206, \"rating\": 5.0,",
+  ">  \"title\": \"Organized Team Communication with Powerful Search\",",
+  "  \"likeBest\": \"Honestly, the channel organization is what keeps...\",",
+  "  \"dislike\": \"The notification system drives me crazy...\",",
+  "  \"problemsSolved\": \"Before Slack, keeping my team aligned was...\",",
+  ">  \"reviewerName\": \"Diana C.\", \"reviewerJobTitle\": \"Lead Business Architect\",",
+  ">  \"reviewerIndustry\": \"Information Technology and Services\",",
+  ">  \"companySegment\": \"Mid-Market\", \"companySize\": \"51-1000 emp.\",",
+  "  \"publishedDate\": \"2026-07-29\", \"reviewSource\": \"Organic\"",
+  "}",
+  "// + product_profile, listing, alternatives, categories_directory"
+ ]
+}

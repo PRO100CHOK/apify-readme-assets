@@ -1,0 +1,30 @@
+{
+ "actor": "booking-all-in-one-scraper",
+ "accent": "#0071C2",
+ "accent2": "#FFB700",
+ "eyebrow": [
+  "BOOKING.COM",
+  "6 MODES"
+ ],
+ "headline": [
+  "EVERY HOTEL.",
+  "EVERY PRICE.",
+  "AS JSON."
+ ],
+ "lede": "One Actor instead of a stack of single-purpose tools: <b>hotel search, room-level prices with a calendar up to 365 days ahead, reviews, hotel details and host / owner data</b>. <i>Rating, review count, star class, coordinates and distance from the centre.</i> <u>No login, no Booking API key.</u>",
+ "pill": "6 MODES * 365-DAY PRICE CALENDAR",
+ "code": [
+  "// scrapeType: \"search\" · one item per property",
+  "{",
+  ">  \"dataType\": \"property\", \"name\": \"Mercure Amsterdam Sloterdijk Station\",",
+  ">  \"stars\": 4, \"rating\": 8.6, \"ratingLabel\": \"Excellent\", \"reviewsCount\": 4177,",
+  ">  \"price\": 126.21, \"priceRounded\": \"$126\", \"currency\": \"USD\",",
+  "  \"city\": \"Amsterdam\", \"countryCode\": \"nl\",",
+  "  \"latitude\": 52.387911, \"longitude\": 4.834296,",
+  ">  \"distanceFromCenter\": \"4.3 km from downtown\",",
+  "  \"hostType\": \"PROFESSIONAL\", \"isSoldOut\": false,",
+  "  \"image\": \"https://cf.bstatic.com/xdata/images/hotel/square600/873579185.webp\"",
+  "}",
+  "// + prices (calendar), reviews, hotelDetails, hostInfo, all"
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "actor": "aliexpress-scraper",
+ "accent": "#FF4747",
+ "accent2": "#FF8A00",
+ "eyebrow": [
+  "ALIEXPRESS",
+  "3 MODES"
+ ],
+ "headline": [
+  "EVERY PRODUCT.",
+  "EVERY VARIANT.",
+  "AS JSON."
+ ],
+ "lede": "<b>One clean row per product</b> — price and discount, orders sold, rating, <i>every SKU variant with its own price and live stock</i>, shipping cost and delivery dates. Search, full product details and reviews in one Actor. <u>No login, no AliExpress API key.</u>",
+ "pill": "3 MODES * PER-SKU PRICE + STOCK",
+ "code": [
+  "// scrapeType: \"search\" · one row per product, no record soup",
+  "{",
+  ">  \"productId\": \"3256806779925038\", \"title\": \"TWS E6S Wireless Earbuds\",",
+  ">  \"price\": 0.99, \"originalPrice\": 6.81, \"discountPercent\": 85,",
+  "  \"priceMin\": 0.99, \"priceMax\": 4.87, \"currency\": \"USD\",",
+  ">  \"rating\": 4.9, \"reviewsCount\": 13677, \"ordersCount\": 100000,",
+  ">  \"ordersCountExact\": 120058, \"wishlistCount\": 810, \"stockTotal\": 4049,",
+  "  \"isChoice\": true, \"listedAt\": \"2024-05-13 00:00:00\", \"skuCount\": 5,",
+  "  \"variantProperties\": [{ \"name\": \"Color\",",
+  "    \"values\": [\"WHITE\", \"Blue\", \"green\", \"black\", \"Pink\"] }],",
+  ">  \"skus\": [{ \"price\": 0.99, \"stock\": 812, \"attributes\": \"WHITE\" }, ... ],",
+  "  \"badges\": [\"Save $5.82\", \"Delivery: Aug 09 - 14\"]",
+  "}"
+ ]
+}

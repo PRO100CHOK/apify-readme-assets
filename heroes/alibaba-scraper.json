@@ -1,0 +1,32 @@
+{
+ "actor": "alibaba-scraper",
+ "accent": "#FF6A00",
+ "accent2": "#FFB000",
+ "eyebrow": [
+  "ALIBABA.COM",
+  "5 MODES"
+ ],
+ "headline": [
+  "EVERY PRODUCT.",
+  "EVERY SUPPLIER.",
+  "AS JSON."
+ ],
+ "lede": "<b>Keyword search, full product detail (up to 230 fields), verified supplier dossiers (52 fields), supplier catalogues and buyer reviews</b>. <i>Quantity price tiers, MOQ and lead time</i> on every product. <u>From $1.40 per 1,000 products on paid plans.</u>",
+ "pill": "5 MODES * UP TO 230 FIELDS / PRODUCT",
+ "code": [
+  "// scrapeType: \"product\" · 24 blocks, up to 230 fields",
+  "{",
+  ">  \"productId\": \"1600169703353\", \"type\": \"product\",",
+  ">  \"title\": \"Neon Led Strip Light Rgb Led Dream Color 60led/m 12v\",",
+  "  \"price\": {",
+  ">    \"min\": 9.0, \"max\": 9.5, \"display\": \"$9-9.50\", \"unit\": \"piece\",",
+  ">    \"priceModel\": \"quantity_tiers\", \"tiers\": [",
+  "      { \"minQuantity\": 100, \"maxQuantity\": 299, \"price\": 9.5 },",
+  "      { \"minQuantity\": 300, \"maxQuantity\": 499, \"price\": 9.3 },",
+  "      { \"minQuantity\": 500, \"price\": 9.0 }] },",
+  ">  \"order\": { \"minOrderQuantity\": 100, \"leadTimeDays\": 30 },",
+  "  \"media\": { \"mainImage\": \"https://s.alicdn.com/...png\", \"hasVideo\": true },",
+  "  \"specifications\": [{ \"name\": \"Place of Origin\", ... }]",
+  "}   // + search, supplier, supplierProducts, reviews"
+ ]
+}

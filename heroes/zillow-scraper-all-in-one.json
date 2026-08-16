@@ -1,0 +1,31 @@
+{
+ "actor": "zillow-scraper-all-in-one",
+ "accent": "#006AFF",
+ "accent2": "#00C7A9",
+ "eyebrow": [
+  "ZILLOW",
+  "4 MODES"
+ ],
+ "headline": [
+  "EVERY LISTING.",
+  "EVERY ZESTIMATE.",
+  "AS JSON."
+ ],
+ "lede": "<b>Search (for sale, for rent, sold), full property details with 100+ facts, Zestimate&reg; home values and real-estate agent profiles</b> — four modes in one Actor. <i>Price, beds, baths, area, lot size, tax assessment and days on Zillow.</i> <u>More than 500 results from a single search.</u>",
+ "pill": "4 MODES * ZESTIMATE * AGENT DATA",
+ "code": [
+  "// mode: \"search\" · one item per listing",
+  "{",
+  ">  \"zpid\": \"113419231\", \"statusType\": \"FOR_SALE\", \"statusText\": \"House for sale\",",
+  ">  \"price\": 2950000, \"priceLabel\": \"$2,950,000\",",
+  "  \"address\": \"509 Gothic Avenue, Crested Butte, CO 81224\",",
+  "  \"city\": \"Crested Butte\", \"state\": \"CO\", \"zipcode\": \"81224\",",
+  ">  \"beds\": 3, \"baths\": 3, \"area\": 1660, \"lotAreaValue\": 6098.4,",
+  "  \"homeType\": \"SINGLE_FAMILY\", \"daysOnZillow\": 4, \"has3DModel\": true,",
+  ">  \"zestimate\": 2810200, \"rentZestimate\": 3572,",
+  ">  \"taxAssessedValue\": 2422570,",
+  "  \"latitude\": 38.8718, \"longitude\": -106.98193,",
+  "  \"url\": \"https://www.zillow.com/homedetails/509-Gothic-Ave/113419231_zpid/\"",
+  "}   // + propertyDetail, zestimate, agent"
+ ]
+}

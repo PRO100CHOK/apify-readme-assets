@@ -1,0 +1,96 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:760px; }
+  body { background:#08090B; font-family:"Helvetica Neue", Arial, "Segoe UI", sans-serif;
+         -webkit-font-smoothing:antialiased; position:relative; overflow:hidden; }
+  .grid { position:absolute; inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+                     linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+    background-size:38px 38px; }
+  .glow { position:absolute; top:-190px; left:-170px; width:660px; height:560px;
+    background:radial-gradient(closest-side, #006AFF38, #006AFF00); }
+  .glow2 { position:absolute; top:230px; right:-220px; width:540px; height:480px;
+    background:radial-gradient(closest-side, #00C7A91E, #00C7A900); }
+  .wrap { position:relative; padding:44px 45px 46px; }
+
+  .eyebrow { display:flex; align-items:center; gap:11px; margin-bottom:22px; }
+  .dot { width:9px; height:9px; border-radius:50%; background:#006AFF;
+         box-shadow:0 0 14px 3px #006AFFA6; }
+  .eyebrow span { font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13px; font-weight:700; letter-spacing:.20em; color:#006AFF; }
+  .eyebrow span em { font-style:normal; color:#6E7681; }
+
+  h1 { line-height:.94; letter-spacing:-.035em; font-weight:800; }
+  h1 div { font-size:59px; }
+  .l1 { color:#FFFFFF; } .l2 { color:#006AFF; } .l3 { color:#6E7681; }
+
+  p.lede { margin-top:28px; font-size:17.5px; line-height:1.52; color:#C9CDD3; max-width:655px; }
+  p.lede b { color:#FFFFFF; font-weight:700; }
+  p.lede i { font-style:normal; color:#006AFF; font-weight:700; }
+  p.lede u { text-decoration:none; color:#00C7A9; font-weight:700; }
+
+  .badges { margin-top:30px; display:flex; align-items:center; gap:16px; }
+  .pill { border:1px solid #006AFF73; border-radius:999px; padding:9px 18px;
+    font-family:"Cascadia Mono", Consolas, monospace; font-size:12px; font-weight:700;
+    letter-spacing:.11em; color:#006AFF; background:#006AFF12; }
+  .runs { font-family:"Cascadia Mono", Consolas, monospace; font-size:12px;
+    letter-spacing:.11em; color:#6E7681; }
+  .runs b { color:#E6E8EB; } .sep { color:#3A3F46; }
+
+  .term { margin-top:42px; border:1px solid #23262B; border-radius:12px;
+    background:#0C0E11; overflow:hidden; }
+  .bar { display:flex; align-items:center; gap:9px; padding:12px 16px;
+    border-bottom:1px solid #1B1E23; background:#101317; }
+  .b { width:11px; height:11px; border-radius:50%; }
+  .b1{background:#FF5F57} .b2{background:#FEBC2E} .b3{background:#28C840}
+  .path { margin-left:9px; font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:12.5px; letter-spacing:.05em; color:#6E7681; }
+  .live { margin-left:auto; display:flex; align-items:center; gap:6px;
+    border:1px solid rgba(40,200,64,.35); border-radius:999px; padding:4px 11px;
+    background:rgba(40,200,64,.08); font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:10.5px; font-weight:700; letter-spacing:.11em; color:#28C840; }
+  .live .d { width:6px; height:6px; border-radius:50%; background:#28C840; }
+
+  pre { padding:18px 20px 20px; font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13.2px; line-height:1.76; color:#C9CDD3; white-space:normal; }
+  /* every source line is its own block, so no stray blank rows */
+  .ln { display:block; white-space:pre; }
+  .hl { background:#006AFF1C; box-shadow:inset 3px 0 0 #006AFF; margin:0 -20px;
+        padding:0 20px 0 17px; }
+  .c { color:#5A616B; } .k { color:#79C0FF; } .s { color:#7EE787; }
+  .n { color:#FFA657; } .p { color:#8B949E; }
+</style></head>
+<body>
+  <div class="grid"></div><div class="glow"></div><div class="glow2"></div>
+  <div class="wrap">
+    <div class="eyebrow"><div class="dot"></div>
+      <span>ZILLOW <em>/</em> 4 MODES</span></div>
+    <h1><div class="l1">EVERY LISTING.</div><div class="l2">EVERY ZESTIMATE.</div><div class="l3">AS JSON.</div></h1>
+    <p class="lede"><b>Search (for sale, for rent, sold), full property details with 100+ facts, Zestimate&reg; home values and real-estate agent profiles</b> — four modes in one Actor. <i>Price, beds, baths, area, lot size, tax assessment and days on Zillow.</i> <u>More than 500 results from a single search.</u></p>
+    <div class="badges">
+      <div class="pill">4 MODES &bull; ZESTIMATE &bull; AGENT DATA</div><div class="sep">&bull;</div>
+      <div class="runs">RUNS ON <b>APIFY</b></div>
+    </div>
+    <div class="term">
+      <div class="bar">
+        <div class="b b1"></div><div class="b b2"></div><div class="b b3"></div>
+        <div class="path">~/zillow-scraper-all-in-one</div>
+        <div class="live"><div class="d"></div>LIVE</div>
+      </div>
+      <pre><span class="ln"><span class="c">// mode: &quot;search&quot; · one item per listing</span></span
+        ><span class="ln"><span class="p">{</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;zpid&quot;</span><span class="p">: </span><span class="s">&quot;113419231&quot;</span><span class="p">, </span><span class="k">&quot;statusType&quot;</span><span class="p">: </span><span class="s">&quot;FOR_SALE&quot;</span><span class="p">, </span><span class="k">&quot;statusText&quot;</span><span class="p">: </span><span class="s">&quot;House for sale&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;price&quot;</span><span class="p">: </span><span class="n">2950000</span><span class="p">, </span><span class="k">&quot;priceLabel&quot;</span><span class="p">: </span><span class="s">&quot;$2,950,000&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;address&quot;</span><span class="p">: </span><span class="s">&quot;509 Gothic Avenue, Crested Butte, CO 81224&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;city&quot;</span><span class="p">: </span><span class="s">&quot;Crested Butte&quot;</span><span class="p">, </span><span class="k">&quot;state&quot;</span><span class="p">: </span><span class="s">&quot;CO&quot;</span><span class="p">, </span><span class="k">&quot;zipcode&quot;</span><span class="p">: </span><span class="s">&quot;81224&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;beds&quot;</span><span class="p">: </span><span class="n">3</span><span class="p">, </span><span class="k">&quot;baths&quot;</span><span class="p">: </span><span class="n">3</span><span class="p">, </span><span class="k">&quot;area&quot;</span><span class="p">: </span><span class="n">1660</span><span class="p">, </span><span class="k">&quot;lotAreaValue&quot;</span><span class="p">: </span><span class="n">6098.4</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;homeType&quot;</span><span class="p">: </span><span class="s">&quot;SINGLE_FAMILY&quot;</span><span class="p">, </span><span class="k">&quot;daysOnZillow&quot;</span><span class="p">: </span><span class="n">4</span><span class="p">, </span><span class="k">&quot;has3DModel&quot;</span><span class="p">: </span><span class="n">true</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;zestimate&quot;</span><span class="p">: </span><span class="n">2810200</span><span class="p">, </span><span class="k">&quot;rentZestimate&quot;</span><span class="p">: </span><span class="n">3572</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;taxAssessedValue&quot;</span><span class="p">: </span><span class="n">2422570</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;latitude&quot;</span><span class="p">: </span><span class="n">38.8718</span><span class="p">, </span><span class="k">&quot;longitude&quot;</span><span class="p">: </span><span class="n">-106.98193</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;url&quot;</span><span class="p">: </span><span class="s">&quot;https://www.zillow.com/homedetails/509-Gothic-Ave/113419231_zpid/&quot;</span></span
+        ><span class="ln"><span class="p">}   </span><span class="c">// + propertyDetail, zestimate, agent</span></span></pre>
+    </div>
+  </div>
+</body></html>

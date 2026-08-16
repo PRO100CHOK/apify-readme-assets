@@ -1,0 +1,96 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:760px; }
+  body { background:#08090B; font-family:"Helvetica Neue", Arial, "Segoe UI", sans-serif;
+         -webkit-font-smoothing:antialiased; position:relative; overflow:hidden; }
+  .grid { position:absolute; inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+                     linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+    background-size:38px 38px; }
+  .glow { position:absolute; top:-190px; left:-170px; width:660px; height:560px;
+    background:radial-gradient(closest-side, #FF990038, #FF990000); }
+  .glow2 { position:absolute; top:230px; right:-220px; width:540px; height:480px;
+    background:radial-gradient(closest-side, #2D74FF1E, #2D74FF00); }
+  .wrap { position:relative; padding:44px 45px 46px; }
+
+  .eyebrow { display:flex; align-items:center; gap:11px; margin-bottom:22px; }
+  .dot { width:9px; height:9px; border-radius:50%; background:#FF9900;
+         box-shadow:0 0 14px 3px #FF9900A6; }
+  .eyebrow span { font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13px; font-weight:700; letter-spacing:.20em; color:#FF9900; }
+  .eyebrow span em { font-style:normal; color:#6E7681; }
+
+  h1 { line-height:.94; letter-spacing:-.035em; font-weight:800; }
+  h1 div { font-size:59px; }
+  .l1 { color:#FFFFFF; } .l2 { color:#FF9900; } .l3 { color:#6E7681; }
+
+  p.lede { margin-top:28px; font-size:17.5px; line-height:1.52; color:#C9CDD3; max-width:655px; }
+  p.lede b { color:#FFFFFF; font-weight:700; }
+  p.lede i { font-style:normal; color:#FF9900; font-weight:700; }
+  p.lede u { text-decoration:none; color:#2D74FF; font-weight:700; }
+
+  .badges { margin-top:30px; display:flex; align-items:center; gap:16px; }
+  .pill { border:1px solid #FF990073; border-radius:999px; padding:9px 18px;
+    font-family:"Cascadia Mono", Consolas, monospace; font-size:12px; font-weight:700;
+    letter-spacing:.11em; color:#FF9900; background:#FF990012; }
+  .runs { font-family:"Cascadia Mono", Consolas, monospace; font-size:12px;
+    letter-spacing:.11em; color:#6E7681; }
+  .runs b { color:#E6E8EB; } .sep { color:#3A3F46; }
+
+  .term { margin-top:42px; border:1px solid #23262B; border-radius:12px;
+    background:#0C0E11; overflow:hidden; }
+  .bar { display:flex; align-items:center; gap:9px; padding:12px 16px;
+    border-bottom:1px solid #1B1E23; background:#101317; }
+  .b { width:11px; height:11px; border-radius:50%; }
+  .b1{background:#FF5F57} .b2{background:#FEBC2E} .b3{background:#28C840}
+  .path { margin-left:9px; font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:12.5px; letter-spacing:.05em; color:#6E7681; }
+  .live { margin-left:auto; display:flex; align-items:center; gap:6px;
+    border:1px solid rgba(40,200,64,.35); border-radius:999px; padding:4px 11px;
+    background:rgba(40,200,64,.08); font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:10.5px; font-weight:700; letter-spacing:.11em; color:#28C840; }
+  .live .d { width:6px; height:6px; border-radius:50%; background:#28C840; }
+
+  pre { padding:18px 20px 20px; font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13.2px; line-height:1.76; color:#C9CDD3; white-space:normal; }
+  /* every source line is its own block, so no stray blank rows */
+  .ln { display:block; white-space:pre; }
+  .hl { background:#FF99001C; box-shadow:inset 3px 0 0 #FF9900; margin:0 -20px;
+        padding:0 20px 0 17px; }
+  .c { color:#5A616B; } .k { color:#79C0FF; } .s { color:#7EE787; }
+  .n { color:#FFA657; } .p { color:#8B949E; }
+</style></head>
+<body>
+  <div class="grid"></div><div class="glow"></div><div class="glow2"></div>
+  <div class="wrap">
+    <div class="eyebrow"><div class="dot"></div>
+      <span>AMAZON <em>/</em> 6 MODES</span></div>
+    <h1><div class="l1">EVERY PRODUCT.</div><div class="l2">EVERY REVIEW.</div><div class="l3">AS JSON.</div></h1>
+    <p class="lede"><b>Product details, search, Best-Sellers categories, customer reviews, seller profiles and buy-box offers</b> — six scrape modes across <i>19 Amazon marketplaces</i>. Price, list price, stars breakdown, stock, features and images on every product. <u>Pay per event, no subscription.</u></p>
+    <div class="badges">
+      <div class="pill">6 MODES &bull; 19 MARKETPLACES</div><div class="sep">&bull;</div>
+      <div class="runs">RUNS ON <b>APIFY</b></div>
+    </div>
+    <div class="term">
+      <div class="bar">
+        <div class="b b1"></div><div class="b b2"></div><div class="b b3"></div>
+        <div class="path">~/amazon-scraper</div>
+        <div class="live"><div class="d"></div>LIVE</div>
+      </div>
+      <pre><span class="ln"><span class="c">// scrapeType: &quot;product&quot; · one item per ASIN</span></span
+        ><span class="ln"><span class="p">{</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;asin&quot;</span><span class="p">: </span><span class="s">&quot;B0BDHWDR12&quot;</span><span class="p">, </span><span class="k">&quot;brand&quot;</span><span class="p">: </span><span class="s">&quot;Apple&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;title&quot;</span><span class="p">: </span><span class="s">&quot;Apple AirPods Pro (2nd Gen) Wireless Earbuds...&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;price&quot;</span><span class="p">: </span><span class="n">258.54</span><span class="p">, </span><span class="k">&quot;listPrice&quot;</span><span class="p">: </span><span class="n">299.0</span><span class="p">, </span><span class="k">&quot;discountPercent&quot;</span><span class="p">: </span><span class="s">&quot;-14%&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;currency&quot;</span><span class="p">: </span><span class="s">&quot;$&quot;</span><span class="p">, </span><span class="k">&quot;inStock&quot;</span><span class="p">: </span><span class="n">true</span><span class="p">, </span><span class="k">&quot;inStockText&quot;</span><span class="p">: </span><span class="s">&quot;In Stock&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;stars&quot;</span><span class="p">: </span><span class="n">4.7</span><span class="p">, </span><span class="k">&quot;reviewsCount&quot;</span><span class="p">: </span><span class="n">57949</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;starsBreakdown&quot;</span><span class="p">: { </span><span class="k">&quot;5 star&quot;</span><span class="p">: </span><span class="s">&quot;87%&quot;</span><span class="p">, </span><span class="k">&quot;4 star&quot;</span><span class="p">: </span><span class="s">&quot;8%&quot;</span><span class="p">, </span><span class="k">&quot;3 star&quot;</span><span class="p">: </span><span class="s">&quot;2%&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">    </span><span class="k">&quot;2 star&quot;</span><span class="p">: </span><span class="s">&quot;0%&quot;</span><span class="p">, </span><span class="k">&quot;1 star&quot;</span><span class="p">: </span><span class="s">&quot;3%&quot;</span><span class="p"> },</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;features&quot;</span><span class="p">: [</span><span class="s">&quot;RICHER AUDIO EXPERIENCE - the Apple H2 chip...&quot;</span><span class="p">, ... ],</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;images&quot;</span><span class="p">: [</span><span class="s">&quot;https://m.media-amazon.com/images/I/61SUj2...&quot;</span><span class="p">]</span></span
+        ><span class="ln"><span class="p">}</span></span
+        ><span class="ln"><span class="c">// + search, category, reviews, seller, offers</span></span></pre>
+    </div>
+  </div>
+</body></html>

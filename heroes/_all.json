@@ -1,0 +1,741 @@
+{
+ "semrush-scraper": {
+  "actor": "semrush-scraper",
+  "accent": "#FF642D",
+  "accent2": "#2D74FF",
+  "eyebrow": [
+   "SEMRUSH",
+   "4 MODES"
+  ],
+  "headline": [
+   "EVERY DOMAIN.",
+   "EVERY KEYWORD.",
+   "AS JSON."
+  ],
+  "lede": "Turn Semrush into a plug-in SEO data API: <b>domain overview, keyword research, site audit and top-websites ranking</b>. <i>Volume, CPC, keyword difficulty, intents, clusters, related keywords and questions</i> — flat KPI fields plus the raw nested detail. <u>No Semrush subscription.</u>",
+  "pill": "4 MODES * KEYWORD + DOMAIN DATA * NO LOGIN",
+  "code": [
+   "// mode: \"keyword\" · one dataset item per keyword",
+   "{",
+   ">  \"keyword\": \"best running shoes\", \"database\": \"us\", \"volume\": 60500,",
+   ">  \"cpc_usd\": 1.1, \"competition\": 1, \"keyword_difficulty\": 49,",
+   "  \"intents\": [\"commercial\"], \"referring_domains_median\": 11,",
+   "  \"organic_results_count\": 753000000, \"keyword_ideas_total\": 31402,",
+   "  \"volume_trend_12mo\": [44, 44, 44, 36, 44, 44, 44, 36, 44, 44, 44, 100],",
+   ">  \"volume_by_country\": [{ \"country\": \"us\", \"volume\": 60500 },",
+   ">    { \"country\": \"in\", \"volume\": 40500 }, { \"country\": \"uk\", \"volume\": 12100 }],",
+   "  \"related_keywords\": [{ \"keyword\": \"best running shoes for men\",",
+   "    \"volume\": 33100, \"keyword_difficulty\": 45 }, ... ],",
+   ">  \"questions\": [{ \"keyword\": \"what are the best running shoes\",",
+   ">    \"volume\": 2400, \"keyword_difficulty\": 42 }, ... ],",
+   "  \"clusters\": [...]   // + domain, seo_audit and top_websites modes",
+   "}"
+  ]
+ },
+ "similarweb-scraper": {
+  "actor": "similarweb-scraper",
+  "accent": "#00C7A9",
+  "accent2": "#2D74FF",
+  "eyebrow": [
+   "SIMILARWEB",
+   "3 SOURCES"
+  ],
+  "headline": [
+   "EVERY VISIT.",
+   "EVERY RANK.",
+   "AS JSON."
+  ],
+  "lede": "<b>Traffic estimates, global and country rank, engagement, traffic sources and top countries</b> for any domain — plus <i>similar-sites discovery and AITDK domain intelligence</i> with WHOIS and keyword density. <u>Up to 50 domains per run.</u>",
+  "pill": "3 SOURCES * 50 DOMAINS / RUN * NO LOGIN",
+  "code": [
+   "// searchType: \"similarweb\" · one item per domain",
+   "{",
+   ">  \"SiteName\": \"google.com\", \"Title\": \"Google\",",
+   "  \"Category\": \"computers_electronics_and_technology/search_engines\",",
+   ">  \"GlobalRank\": { \"Rank\": 1 }, \"CountryRank\": { \"CountryCode\": \"US\", \"Rank\": 1 },",
+   "  \"Engagments\": {",
+   ">    \"Visits\": 85756574615, \"VisitsFormatted\": \"85.76B\",",
+   ">    \"BounceRate\": 28.36, \"PagePerVisit\": 8.52, \"TimeOnSite\": 610 },",
+   "  \"EstimatedMonthlyVisits\": { \"2025-12-01\": 84172772881, ... },",
+   ">  \"TrafficSources\": { \"Direct\": 85.83, \"Search\": 8.35,",
+   ">    \"Referrals\": 4.46, \"Social\": 0.76, \"Paid Referrals\": 0.33 },",
+   "  \"TopCountryShares\": [{ \"CountryCode\": \"US\", \"Value\": 24.59 }, ... ]",
+   "}   // + similar_sites and aitdk search types"
+  ]
+ },
+ "extract-emails": {
+  "actor": "extract-emails",
+  "accent": "#10B981",
+  "accent2": "#2D74FF",
+  "eyebrow": [
+   "WEBSITE CONTACTS",
+   "BULK CRAWL"
+  ],
+  "headline": [
+   "EVERY EMAIL.",
+   "EVERY PHONE.",
+   "AS JSON."
+  ],
+  "lede": "Bulk <b>email extractor, phone-number scraper and social-profile finder</b> in one: crawl <i>up to 100 domains per run in parallel</i>, decode obfuscated addresses and validate real phone numbers. <u>$1 per 1,000 domains — domains that return nothing are not charged.</u>",
+  "pill": "100 DOMAINS / RUN * EMAILS + PHONES + SOCIALS",
+  "code": [
+   "// one dataset item per domain crawled",
+   "{",
+   ">  \"domain\": \"example.com\", \"url\": \"https://example.com\",",
+   ">  \"emails\": [\"info@example.com\", \"sales@example.com\"],",
+   "  \"externalEmails\": [\"studio@design-partner.com\"],",
+   ">  \"phones\": [\"+41441234567\"],",
+   "  \"socialLinks\": {",
+   "    \"facebook\": \"https://facebook.com/example\",",
+   "    \"twitter\": \"https://x.com/example\",",
+   ">    \"linkedin\": \"https://linkedin.com/company/example\",",
+   "    \"instagram\": null, \"youtube\": null, \"tiktok\": null, \"github\": null },",
+   ">  \"pagesScanned\": 12, \"scrapedAt\": \"2026-07-05T12:00:00.000Z\"",
+   "}"
+  ]
+ },
+ "instagram-scraper-all-in-one": {
+  "actor": "instagram-scraper-all-in-one",
+  "accent": "#E1306C",
+  "accent2": "#F77737",
+  "eyebrow": [
+   "INSTAGRAM",
+   "15 MODES"
+  ],
+  "headline": [
+   "EVERY POST.",
+   "EVERY FOLLOWER.",
+   "AS JSON."
+  ],
+  "lede": "<b>Profiles, posts, reels, comments, likes, followers, following, tagged, stories, highlights, hashtags, locations and search</b> — 15 modes in one Actor. <i>Emails and phones pulled out of bios</i> for lead-gen. <u>Most modes need no login at all.</u>",
+  "pill": "15 MODES * BIO CONTACTS * NO API KEY",
+  "code": [
+   "// scrapeType: \"profile\" · one item per profile",
+   "{",
+   ">  \"username\": \"nasa\", \"fullName\": \"NASA\", \"id\": \"528817151\",",
+   "  \"biography\": \"Exploring the universe and our home planet.\",",
+   ">  \"followersCount\": 104409417, \"followsCount\": 78, \"postsCount\": 4828,",
+   "  \"externalUrl\": \"https://www.nasa.gov\", \"bioLinks\": [\"https://www.nasa.gov\"],",
+   ">  \"isVerified\": true, \"isPrivate\": false, \"isBusinessAccount\": true,",
+   "  \"category\": \"Government organization\",",
+   "  \"profilePicUrl\": \"https://instagram.f...jpg\"",
+   "}",
+   "// + posts, reels, comments, likes, followers, following, tagged,",
+   "//   stories, highlights, hashtag, location, search, contacts"
+  ]
+ },
+ "tiktok-profile-pro": {
+  "actor": "tiktok-profile-pro",
+  "accent": "#FE2C55",
+  "accent2": "#25F4EE",
+  "eyebrow": [
+   "TIKTOK",
+   "PROFILE API"
+  ],
+  "headline": [
+   "EVERY PROFILE.",
+   "EVERY VIDEO.",
+   "AS JSON."
+  ],
+  "lede": "TikTok has no open official API. This Actor is an <b>unofficial TikTok profile API</b>: follower, heart and video counts, the profile's <i>videos, reposts and liked videos</i> with full play/like/comment/share stats, plus <u>emails and links pulled from the bio</u> and engagement analytics.",
+  "pill": "BIO CONTACTS * VIDEOS * ANALYTICS",
+  "code": [
+   "// one dataset item per profile",
+   "{",
+   ">  \"username\": \"psiho.kisa\", \"nickname\": \"Кисы\", \"verified\": false,",
+   ">  \"followerCount\": 326901, \"heartCount\": 16800000, \"videoCount\": 121,",
+   "  \"signature\": \"ДРУГ КИСА · 4-5\", \"region\": \"RU\", \"bioLink\": null,",
+   "  \"avatar\": { \"thumb\": \"https://...\", \"large\": \"https://...\" },",
+   "  \"videos\": [{",
+   ">    \"id\": \"7625229188693232918\", \"duration\": 76, \"createTime\": 1775387026,",
+   ">    \"playCount\": 2000000, \"diggCount\": 156500, \"commentCount\": 612,",
+   ">    \"shareCount\": 10700, \"collectCount\": 13818",
+   "  }, ... ],",
+   "  \"contacts\": { ... },   // extractContacts: true",
+   "  \"analytics\": { ... }   // computeAnalytics: true",
+   "}"
+  ]
+ },
+ "youtube-scraper-all-in-one": {
+  "actor": "youtube-scraper-all-in-one",
+  "accent": "#FF0033",
+  "accent2": "#FF8A00",
+  "eyebrow": [
+   "YOUTUBE",
+   "7 MODES"
+  ],
+  "headline": [
+   "EVERY VIDEO.",
+   "EVERY TRANSCRIPT.",
+   "AS JSON."
+  ],
+  "lede": "<b>Videos, channels, search, Shorts, comments, transcripts and playlists</b> — seven modes, <i>no API key and no quota</i>. 30+ fields per video, captions in every available language, channel emails and socials. <u>From $2 per 1,000 videos on paid plans.</u>",
+  "pill": "7 MODES * TRANSCRIPTS * NO API KEY",
+  "code": [
+   "// searchType: \"video\" · 30+ fields per video",
+   "{",
+   ">  \"id\": \"dQw4w9WgXcQ\", \"title\": \"Rick Astley - Never Gonna Give You Up\",",
+   ">  \"viewCount\": 1780016266, \"likes\": 19140845, \"commentsCount\": 2400000,",
+   "  \"durationSeconds\": 213, \"publishDate\": \"2009-10-25\",",
+   ">  \"channelName\": \"Rick Astley\", \"numberOfSubscribers\": 4500000,",
+   "  \"channelId\": \"UCuAXFkgsw1L7xaCfnd5JJOw\",",
+   "  \"hashtags\": [\"#RickAstley\", \"#NeverGonnaGiveYouUp\"],",
+   ">  \"availableCaptions\": [\"en\", \"de-DE\", \"ja\", \"pt-BR\", \"es-419\"],",
+   "  \"thumbnailUrl\": \"https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg\"",
+   "}",
+   "// + channel, search, shorts, comments, transcript, playlist"
+  ]
+ },
+ "reddit-scraper-all-in-one": {
+  "actor": "reddit-scraper-all-in-one",
+  "accent": "#FF4500",
+  "accent2": "#FFB000",
+  "eyebrow": [
+   "REDDIT",
+   "5 MODES"
+  ],
+  "headline": [
+   "EVERY POST.",
+   "EVERY COMMENT.",
+   "AS JSON."
+  ],
+  "lede": "Reddit's official API wants app registration, OAuth and — above small volumes — money. This Actor is an <b>unofficial Reddit API alternative</b>: search, subreddits, single posts, users and any Reddit URL. <i>Comment trees, scores, flairs and awards</i>, plus <u>emails found in posts and profiles.</u>",
+  "pill": "5 MODES * COMMENT TREES * NO OAUTH",
+  "code": [
+   "// scrapeType: \"search\" · one item per post",
+   "{",
+   ">  \"type\": \"post\", \"id\": \"1kx9q2z\", \"community\": \"r/Entrepreneur\",",
+   ">  \"title\": \"How I got my first 100 customers\", \"author\": \"startup_founder\",",
+   "  \"body\": \"Long story short: I stopped building and started talking...\",",
+   ">  \"score\": 1543, \"upvoteRatio\": 0.97, \"numberOfComments\": 218,",
+   "  \"createdAt\": \"2026-05-20T14:08:11+00:00\", \"flair\": \"Case Study\",",
+   "  \"isNsfw\": false, \"isSelf\": true, \"totalAwards\": 3,",
+   "  \"url\": \"https://www.reddit.com/r/Entrepreneur/comments/1kx9q2z/...\"",
+   "}",
+   "// + subreddit, post (with comment tree), user, url modes"
+  ]
+ },
+ "threads-scraper-usage": {
+  "actor": "threads-scraper-usage",
+  "accent": "#8B5CF6",
+  "accent2": "#E1306C",
+  "eyebrow": [
+   "THREADS.NET",
+   "POSTS + PROFILES"
+  ],
+  "headline": [
+   "EVERY POST.",
+   "EVERY PROFILE.",
+   "AS JSON."
+  ],
+  "lede": "<b>Posts, user profiles, follower and following lists and search results</b> from Threads.net at scale. <i>Likes, replies, reposts, quotes and shares</i> on every post, linked Instagram account on every profile, and <u>emails and URLs extracted straight out of post text.</u>",
+  "pill": "POSTS * PROFILES * FOLLOWERS * SEARCH",
+  "code": [
+   "// action: \"user_posts\" · one item per post",
+   "{",
+   ">  \"post_id\": \"3578921456789012345\", \"code\": \"DVp9LrHAjHq\",",
+   "  \"text\": \"Just launched our new Python library for data processing...\",",
+   ">  \"username\": \"techdev\", \"full_name\": \"Tech Developer\", \"is_verified\": true,",
+   ">  \"like_count\": 245, \"reply_count\": 32, \"repost_count\": 18,",
+   "  \"quote_count\": 5, \"reshare_count\": 12, \"is_reply\": false,",
+   "  \"taken_at\": 1710000000, \"media_type\": 19, \"images\": [],",
+   ">  \"emails_in_text\": [\"hello@techdev.com\"],",
+   "  \"urls_in_text\": [\"https://github.com/techdev/library\"]",
+   "}"
+  ]
+ },
+ "pinterest-scraper-all-in-one": {
+  "actor": "pinterest-scraper-all-in-one",
+  "accent": "#E60023",
+  "accent2": "#FF8A00",
+  "eyebrow": [
+   "PINTEREST",
+   "7 MODES"
+  ],
+  "headline": [
+   "EVERY PIN.",
+   "EVERY BOARD.",
+   "AS JSON."
+  ],
+  "lede": "<b>Search, pin details, profiles, user pins, boards, board sections and related pins</b> — seven modes, <i>no login and no Pinterest API key</i>. Image, GIF and video pins detected automatically with every resolution URL. <u>From $1 per 1,000 pins on paid plans.</u>",
+  "pill": "7 MODES * NO LOGIN * ALL PIN MEDIA",
+  "code": [
+   "// scrapeType: \"search\" · one item per pin",
+   "{",
+   ">  \"dataType\": \"pin\", \"id\": \"1234567890\", \"title\": \"Minimal home office\",",
+   "  \"description\": \"A clean desk setup with warm wood tones...\",",
+   ">  \"images\": { \"170x\": \"...\", \"236x\": \"...\", \"474x\": \"...\", \"736x\": \"...\", \"orig\": \"...\" },",
+   "  \"media_type\": \"image\", \"is_video\": false, \"dominant_color\": \"#d9c7b8\",",
+   ">  \"repin_count\": 4210, \"comment_count\": 18, \"reaction_count\": 312,",
+   "  \"link\": \"https://example.com/article\", \"domain\": \"example.com\",",
+   ">  \"pinner_username\": \"studio.nord\", \"pinner_followers\": 58200,",
+   "  \"board_name\": \"Workspaces\", \"board_url\": \"https://www.pinterest.com/...\"",
+   "}"
+  ]
+ },
+ "meta-ads-library-scraper": {
+  "actor": "meta-ads-library-scraper",
+  "accent": "#0866FF",
+  "accent2": "#E1306C",
+  "eyebrow": [
+   "META AD LIBRARY",
+   "AD SPY"
+  ],
+  "headline": [
+   "EVERY AD.",
+   "EVERY CREATIVE.",
+   "AS JSON."
+  ],
+  "lede": "Scrape the Meta Ad Library by <b>keyword, Facebook page or ad archive ID</b> — up to <i>39 flat fields per ad</i>: creatives, ad copy, video URLs, CTA type, platforms, run dates and page data. <u>Facebook, Instagram, Messenger, Audience Network and Threads.</u>",
+  "pill": "39 FIELDS / AD * VIDEO + IMAGE URLS",
+  "code": [
+   "// scrapeType: \"search\" · one flat item per ad",
+   "{",
+   ">  \"adArchiveId\": \"1677230640306960\", \"pageName\": \"Amazon Fashion\",",
+   ">  \"pageId\": \"151871258163795\", \"pageLikeCount\": 4214242,",
+   "  \"pageCategories\": [\"Clothing (Brand)\"], \"pageIsDeleted\": false,",
+   ">  \"adContent\": \"Fits that go the distance and level up your A-game.\",",
+   "  \"adTitle\": \"Amazon Fashion\", \"adLinkCaption\": \"amazon.com\",",
+   ">  \"adCallToActionType\": \"SHOP_NOW\", \"adFormat\": \"dpa\",",
+   "  \"adLinkUrl\": \"https://www.amazon.com/b?node=210992350011&...\",",
+   "  \"imageUrls\": [\"https://scontent-phx1-1.xx.fbcdn.net/...\"],",
+   "  \"adLibraryUrl\": \"https://www.facebook.com/ads/library/?id=1677230640306960\"",
+   "}"
+  ]
+ },
+ "trustpilot-all-in-one-scraper": {
+  "actor": "trustpilot-all-in-one-scraper",
+  "accent": "#00B67A",
+  "accent2": "#2D74FF",
+  "eyebrow": [
+   "TRUSTPILOT",
+   "6 MODES"
+  ],
+  "headline": [
+   "EVERY REVIEW.",
+   "EVERY COMPANY.",
+   "AS JSON."
+  ],
+  "lede": "<b>Reviews (up to 40 fields), company profiles (50+ fields), transparency analytics, search, categories and reviewer profiles</b> — six modes in one Actor. <i>More than 200 reviews per company</i>, nested straight inside the company record. <u>No login, no Trustpilot API key, no proxies to configure.</u>",
+  "pill": "6 MODES * 40 FIELDS / REVIEW * NO LOGIN",
+  "code": [
+   "// dataType: \"company\" · reviews nested in the company record",
+   "{",
+   ">  \"companyName\": \"Nike\", \"companyDomain\": \"www.nike.com\",",
+   ">  \"trustScore\": 1.6, \"stars\": 1.5, \"numberOfReviews\": 12692,",
+   "  \"primaryCategory\": \"Activewear Store\", \"reviewsCount\": 200,",
+   "  \"transparency\": { \"ratingOneStar\": 9598, \"ratingFiveStars\": 1797,",
+   "    \"replyPercentage\": 0 },",
+   "  \"reviews\": [{",
+   ">    \"reviewTitle\": \"Disgusting customer service\", \"rating\": 1,",
+   ">    \"reviewText\": \"On May 25 I bought my customized jersey ...\",",
+   "    \"language\": \"en\", \"isVerified\": false, \"reviewSource\": \"Organic\",",
+   ">    \"publishedDate\": \"2026-06-12T18:55:37.000Z\", \"likes\": 0,",
+   "    \"reviewerName\": \"...\", \"reviewerId\": \"6a2c3953e33cd10be89f2ef1\"",
+   "  }, ... 199 more]",
+   "}"
+  ]
+ },
+ "g2-scraper": {
+  "actor": "g2-scraper",
+  "accent": "#FF492C",
+  "accent2": "#2D74FF",
+  "eyebrow": [
+   "G2.COM",
+   "5 MODES"
+  ],
+  "headline": [
+   "EVERY REVIEW.",
+   "EVERY COMPETITOR.",
+   "AS JSON."
+  ],
+  "lede": "G2's official API is enterprise-only — a sales call before you see a single row. This Actor is an <b>unofficial G2 API</b>: reviews, product profiles, category listings, alternatives and the category directory. <i>Reviewer job title, industry, company segment and size on every review.</i> <u>More than 100 reviews per product.</u>",
+  "pill": "5 MODES * REVIEWER FIRMOGRAPHICS",
+  "code": [
+   "// scrapeType: \"reviews\" · one item per review",
+   "{",
+   ">  \"type\": \"review\", \"reviewId\": 13183206, \"rating\": 5.0,",
+   ">  \"title\": \"Organized Team Communication with Powerful Search\",",
+   "  \"likeBest\": \"Honestly, the channel organization is what keeps...\",",
+   "  \"dislike\": \"The notification system drives me crazy...\",",
+   "  \"problemsSolved\": \"Before Slack, keeping my team aligned was...\",",
+   ">  \"reviewerName\": \"Diana C.\", \"reviewerJobTitle\": \"Lead Business Architect\",",
+   ">  \"reviewerIndustry\": \"Information Technology and Services\",",
+   ">  \"companySegment\": \"Mid-Market\", \"companySize\": \"51-1000 emp.\",",
+   "  \"publishedDate\": \"2026-07-29\", \"reviewSource\": \"Organic\"",
+   "}",
+   "// + product_profile, listing, alternatives, categories_directory"
+  ]
+ },
+ "google-maps-scraper": {
+  "actor": "google-maps-scraper",
+  "accent": "#EA4335",
+  "accent2": "#34A853",
+  "eyebrow": [
+   "GOOGLE MAPS",
+   "LOCAL LEADS"
+  ],
+  "headline": [
+   "EVERY PLACE.",
+   "EVERY EMAIL.",
+   "AS JSON."
+  ],
+  "lede": "Build a lead list of any local business in any city — <b>name, category, address, phone, website, rating, reviews, photos and opening hours</b> — with the <i>owner's email already extracted from their website</i> plus Facebook, Instagram and X profiles. <u>No login, no Google API key.</u>",
+  "pill": "PLACES * EMAILS * REVIEWS * PHOTOS",
+  "code": [
+   "// one dataset item per place",
+   "{",
+   ">  \"name\": \"Scissors &amp; Scotch\", \"category\": \"Barber shop\",",
+   "  \"address\": \"331 N St NE, Washington, DC 20002, USA\",",
+   "  \"city\": \"Washington\", \"state\": \"DC\", \"zip_code\": \"20002\",",
+   ">  \"phone\": \"(202) 481-2850\", \"website\": \"https://scissorsscotch.com/\",",
+   ">  \"emails\": [\"info@scissorsscotch.com\", \"dc@scissorsscotch.com\"],",
+   ">  \"facebook\": \"https://www.facebook.com/scissorsscotch\",",
+   "  \"instagram\": \"https://www.instagram.com/scissorsscotch/\",",
+   ">  \"rating\": 4.7, \"reviews_count\": 1422, \"price_level\": \"$$\",",
+   "  \"latitude\": 38.9068, \"longitude\": -77.001, \"plus_code\": \"WX4X+PH\",",
+   "  \"opening_hours\": \"Monday: 9 AM-8 PM | Tuesday: 9 AM-8 PM | ...\",",
+   "  \"reviews\": [{ \"rating\": 5, \"text\": \"Best haircut in DC...\" }, ... ]",
+   "}"
+  ]
+ },
+ "amazon-scraper": {
+  "actor": "amazon-scraper",
+  "accent": "#FF9900",
+  "accent2": "#2D74FF",
+  "eyebrow": [
+   "AMAZON",
+   "6 MODES"
+  ],
+  "headline": [
+   "EVERY PRODUCT.",
+   "EVERY REVIEW.",
+   "AS JSON."
+  ],
+  "lede": "<b>Product details, search, Best-Sellers categories, customer reviews, seller profiles and buy-box offers</b> — six scrape modes across <i>19 Amazon marketplaces</i>. Price, list price, stars breakdown, stock, features and images on every product. <u>Pay per event, no subscription.</u>",
+  "pill": "6 MODES * 19 MARKETPLACES",
+  "code": [
+   "// scrapeType: \"product\" · one item per ASIN",
+   "{",
+   ">  \"asin\": \"B0BDHWDR12\", \"brand\": \"Apple\",",
+   ">  \"title\": \"Apple AirPods Pro (2nd Gen) Wireless Earbuds...\",",
+   ">  \"price\": 258.54, \"listPrice\": 299.0, \"discountPercent\": \"-14%\",",
+   "  \"currency\": \"$\", \"inStock\": true, \"inStockText\": \"In Stock\",",
+   ">  \"stars\": 4.7, \"reviewsCount\": 57949,",
+   "  \"starsBreakdown\": { \"5 star\": \"87%\", \"4 star\": \"8%\", \"3 star\": \"2%\",",
+   "    \"2 star\": \"0%\", \"1 star\": \"3%\" },",
+   "  \"features\": [\"RICHER AUDIO EXPERIENCE - the Apple H2 chip...\", ... ],",
+   "  \"images\": [\"https://m.media-amazon.com/images/I/61SUj2...\"]",
+   "}",
+   "// + search, category, reviews, seller, offers"
+  ]
+ },
+ "aliexpress-scraper": {
+  "actor": "aliexpress-scraper",
+  "accent": "#FF4747",
+  "accent2": "#FF8A00",
+  "eyebrow": [
+   "ALIEXPRESS",
+   "3 MODES"
+  ],
+  "headline": [
+   "EVERY PRODUCT.",
+   "EVERY VARIANT.",
+   "AS JSON."
+  ],
+  "lede": "<b>One clean row per product</b> — price and discount, orders sold, rating, <i>every SKU variant with its own price and live stock</i>, shipping cost and delivery dates. Search, full product details and reviews in one Actor. <u>No login, no AliExpress API key.</u>",
+  "pill": "3 MODES * PER-SKU PRICE + STOCK",
+  "code": [
+   "// scrapeType: \"search\" · one row per product, no record soup",
+   "{",
+   ">  \"productId\": \"3256806779925038\", \"title\": \"TWS E6S Wireless Earbuds\",",
+   ">  \"price\": 0.99, \"originalPrice\": 6.81, \"discountPercent\": 85,",
+   "  \"priceMin\": 0.99, \"priceMax\": 4.87, \"currency\": \"USD\",",
+   ">  \"rating\": 4.9, \"reviewsCount\": 13677, \"ordersCount\": 100000,",
+   ">  \"ordersCountExact\": 120058, \"wishlistCount\": 810, \"stockTotal\": 4049,",
+   "  \"isChoice\": true, \"listedAt\": \"2024-05-13 00:00:00\", \"skuCount\": 5,",
+   "  \"variantProperties\": [{ \"name\": \"Color\",",
+   "    \"values\": [\"WHITE\", \"Blue\", \"green\", \"black\", \"Pink\"] }],",
+   ">  \"skus\": [{ \"price\": 0.99, \"stock\": 812, \"attributes\": \"WHITE\" }, ... ],",
+   "  \"badges\": [\"Save $5.82\", \"Delivery: Aug 09 - 14\"]",
+   "}"
+  ]
+ },
+ "alibaba-scraper": {
+  "actor": "alibaba-scraper",
+  "accent": "#FF6A00",
+  "accent2": "#FFB000",
+  "eyebrow": [
+   "ALIBABA.COM",
+   "5 MODES"
+  ],
+  "headline": [
+   "EVERY PRODUCT.",
+   "EVERY SUPPLIER.",
+   "AS JSON."
+  ],
+  "lede": "<b>Keyword search, full product detail (up to 230 fields), verified supplier dossiers (52 fields), supplier catalogues and buyer reviews</b>. <i>Quantity price tiers, MOQ and lead time</i> on every product. <u>From $1.40 per 1,000 products on paid plans.</u>",
+  "pill": "5 MODES * UP TO 230 FIELDS / PRODUCT",
+  "code": [
+   "// scrapeType: \"product\" · 24 blocks, up to 230 fields",
+   "{",
+   ">  \"productId\": \"1600169703353\", \"type\": \"product\",",
+   ">  \"title\": \"Neon Led Strip Light Rgb Led Dream Color 60led/m 12v\",",
+   "  \"price\": {",
+   ">    \"min\": 9.0, \"max\": 9.5, \"display\": \"$9-9.50\", \"unit\": \"piece\",",
+   ">    \"priceModel\": \"quantity_tiers\", \"tiers\": [",
+   "      { \"minQuantity\": 100, \"maxQuantity\": 299, \"price\": 9.5 },",
+   "      { \"minQuantity\": 300, \"maxQuantity\": 499, \"price\": 9.3 },",
+   "      { \"minQuantity\": 500, \"price\": 9.0 }] },",
+   ">  \"order\": { \"minOrderQuantity\": 100, \"leadTimeDays\": 30 },",
+   "  \"media\": { \"mainImage\": \"https://s.alicdn.com/...png\", \"hasVideo\": true },",
+   "  \"specifications\": [{ \"name\": \"Place of Origin\", ... }]",
+   "}   // + search, supplier, supplierProducts, reviews"
+  ]
+ },
+ "tiktok-shop-scraper-usage": {
+  "actor": "tiktok-shop-scraper-usage",
+  "accent": "#25F4EE",
+  "accent2": "#FE2C55",
+  "eyebrow": [
+   "TIKTOK SHOP",
+   "6 MODES"
+  ],
+  "headline": [
+   "EVERY PRODUCT.",
+   "EVERY SELLER.",
+   "AS JSON."
+  ],
+  "lede": "<b>Search, product details, reviews, category pages, stores and creator profiles</b> — six modes, each with its own input section. <i>Price, discount, sales volume, rating and seller data</i> on every product card, plus <u>store analytics with GMV estimation.</u>",
+  "pill": "6 MODES * SALES VOLUME * GMV ESTIMATES",
+  "code": [
+   "// scrapeType: \"search\" · one item per product card",
+   "{",
+   ">  \"productId\": \"1729595536444134138\", \"type\": \"product_card\",",
+   ">  \"title\": \"HydroJug Sport 32oz Portable Water Bottle\",",
+   ">  \"currentPrice\": \"24.99\", \"originalPrice\": \"29.99\", \"discountPercent\": \"-17%\",",
+   ">  \"salesVolume\": 5200, \"rating\": 4.8, \"reviewCount\": \"342\",",
+   "  \"sellerName\": \"HydroJug\", \"tags\": [\"Best Seller\", \"Free Shipping\"],",
+   "  \"searchRank\": 1, \"query\": \"water bottle\",",
+   "  \"productUrl\": \"https://shop.tiktok.com/us/pdp/hydrojug-sport-32oz/...\",",
+   "  \"imageUrls\": [\"https://...\"]",
+   "}",
+   "// + product, reviews, category, store (GMV), creator"
+  ]
+ },
+ "rednote-xiaohongshu-scraper": {
+  "actor": "rednote-xiaohongshu-scraper",
+  "accent": "#FF2442",
+  "accent2": "#FF8A00",
+  "eyebrow": [
+   "REDNOTE 小红书",
+   "8 MODES"
+  ],
+  "headline": [
+   "EVERY NOTE.",
+   "EVERY CREATOR.",
+   "AS JSON."
+  ],
+  "lede": "<b>Trending category feeds, full note details, comment threads, creator profiles, creator notes, keyword research and search</b> — eight modes in one Actor. <i>Likes, collects, shares, hashtags, topics and IP location</i> on every note. <u>No login, no cookies.</u>",
+  "pill": "8 MODES * NOTES + CREATORS + COMMENTS",
+  "code": [
+   "// scrapeType: \"discoverFeed\" · one item per note",
+   "{",
+   ">  \"noteId\": \"6453436d000000000800c87b\", \"noteType\": \"image\",",
+   ">  \"title\": \"芭蕾舞女孩蛋糕 六寸蛋糕 女生蛋糕\",",
+   ">  \"likes\": 23, \"collects\": 15, \"commentsCount\": 4, \"shares\": 4,",
+   "  \"engagementTotal\": 46, \"publishedAt\": \"2023-05-04T05:32:29Z\",",
+   ">  \"ipLocation\": \"河南\", \"authorName\": \"宸一烘焙\",",
+   "  \"authorId\": \"55878481f5a2632c8480b32f\",",
+   "  \"hashtags\": [\"蛋糕\", \"最好吃的奶油蛋糕\", \"生日蛋糕\", \"定制蛋糕\"],",
+   "  \"topics\": [{ \"id\": \"53cb2602b4c4d60d1602cc2a\", \"name\": \"蛋糕\" }]",
+   "}",
+   "// + noteDetails, noteComments, userProfiles, userNotes,",
+   "//   keywordResearch, searchNotes, searchUsers"
+  ]
+ },
+ "zillow-scraper-all-in-one": {
+  "actor": "zillow-scraper-all-in-one",
+  "accent": "#006AFF",
+  "accent2": "#00C7A9",
+  "eyebrow": [
+   "ZILLOW",
+   "4 MODES"
+  ],
+  "headline": [
+   "EVERY LISTING.",
+   "EVERY ZESTIMATE.",
+   "AS JSON."
+  ],
+  "lede": "<b>Search (for sale, for rent, sold), full property details with 100+ facts, Zestimate&reg; home values and real-estate agent profiles</b> — four modes in one Actor. <i>Price, beds, baths, area, lot size, tax assessment and days on Zillow.</i> <u>More than 500 results from a single search.</u>",
+  "pill": "4 MODES * ZESTIMATE * AGENT DATA",
+  "code": [
+   "// mode: \"search\" · one item per listing",
+   "{",
+   ">  \"zpid\": \"113419231\", \"statusType\": \"FOR_SALE\", \"statusText\": \"House for sale\",",
+   ">  \"price\": 2950000, \"priceLabel\": \"$2,950,000\",",
+   "  \"address\": \"509 Gothic Avenue, Crested Butte, CO 81224\",",
+   "  \"city\": \"Crested Butte\", \"state\": \"CO\", \"zipcode\": \"81224\",",
+   ">  \"beds\": 3, \"baths\": 3, \"area\": 1660, \"lotAreaValue\": 6098.4,",
+   "  \"homeType\": \"SINGLE_FAMILY\", \"daysOnZillow\": 4, \"has3DModel\": true,",
+   ">  \"zestimate\": 2810200, \"rentZestimate\": 3572,",
+   ">  \"taxAssessedValue\": 2422570,",
+   "  \"latitude\": 38.8718, \"longitude\": -106.98193,",
+   "  \"url\": \"https://www.zillow.com/homedetails/509-Gothic-Ave/113419231_zpid/\"",
+   "}   // + propertyDetail, zestimate, agent"
+  ]
+ },
+ "realtor-com-scraper": {
+  "actor": "realtor-com-scraper",
+  "accent": "#D92228",
+  "accent2": "#2D74FF",
+  "eyebrow": [
+   "REALTOR.COM",
+   "3 MODES"
+  ],
+  "headline": [
+   "EVERY LISTING.",
+   "EVERY AGENT.",
+   "AS JSON."
+  ],
+  "lede": "<b>Search (~70 fields), full property details (90+ fields) and agent profiles</b> — plus data no other scraper returns: <i>client reviews and star ratings, building permit history and neighborhood price medians</i>. <u>From $1.50 per 1,000 results.</u>",
+  "pill": "3 MODES * PERMITS * AGENT REVIEWS",
+  "code": [
+   "// scrapeType: \"search\" · ~70 fields per listing",
+   "{",
+   ">  \"propertyId\": \"8742581034\", \"status\": \"for_sale\",",
+   "  \"addressLine\": \"5611 Meadow Crst\", \"city\": \"Austin\", \"stateCode\": \"TX\",",
+   ">  \"listPrice\": 372000, \"pricePerSqft\": 233, \"daysOnMarket\": 37,",
+   ">  \"beds\": 3, \"baths\": 2, \"sqft\": 1600, \"lotSqft\": 7187, \"yearBuilt\": 1988,",
+   "  \"propertyType\": \"single_family\", \"photoCount\": 29,",
+   ">  \"agentName\": \"Tarek Boulbol\", \"agentPhone\": \"5125522198\",",
+   "  \"officeName\": \"Texas Premier Realty\",",
+   ">  \"estimate\": 365138, \"estimateSource\": \"Quantarium\",",
+   "  \"neighborhoodMedianListPrice\": 374950,",
+   "  \"neighborhoodMedianDaysOnMarket\": 69",
+   "}   // + propertyDetail (90+ fields, permits), agents"
+  ]
+ },
+ "apartments-scraper-usage": {
+  "actor": "apartments-scraper-usage",
+  "accent": "#F26522",
+  "accent2": "#0BA5EC",
+  "eyebrow": [
+   "APARTMENTS.COM",
+   "3 ACTIONS"
+  ],
+  "headline": [
+   "EVERY RENTAL.",
+   "EVERY CONTACT.",
+   "AS JSON."
+  ],
+  "lede": "<b>Search listings, full property details (120+ fields) and contact emails scraped straight from property websites</b>. <i>Walk, transit and bike scores, floor plans, fees, amenities, schools and photos.</i> <u>Chain the three actions together with a dataset ID.</u>",
+  "pill": "3 ACTIONS * 120+ FIELDS * EMAILS",
+  "code": [
+   "// action 1: search listings · one item per property",
+   "{",
+   ">  \"name\": \"The Max\", \"listingId\": \"abc123\", \"position\": 1,",
+   "  \"address\": { \"full\": \"100 W 57th St, New York, NY 10019\",",
+   "    \"city\": \"New York\", \"state\": \"NY\", \"zip\": \"10019\" },",
+   ">  \"rentRollup\": [{ \"beds\": \"Studio\", \"price\": \"$3,917+\" },",
+   ">    { \"beds\": \"1 Bed\", \"price\": \"$5,639\" }, { \"beds\": \"2 Beds\", \"price\": \"$8,122\" }],",
+   ">  \"priceMin\": 3917, \"priceMax\": 8122, \"phone\": \"(929) 552-4351\",",
+   "  \"amenities\": [\"Pets Allowed\", \"Fitness Center\", \"In Unit Washer & Dryer\"],",
+   "  \"managementCompany\": \"UDR\", \"photoCount\": 21,",
+   ">  \"hasVideo\": true, \"has3DTour\": true, \"hasSpecials\": true, \"tier\": \"diamond\"",
+   "}",
+   "// + action 2: property details (120+ fields) · action 3: emails"
+  ]
+ },
+ "idealista-scraper": {
+  "actor": "idealista-scraper",
+  "accent": "#7FBA00",
+  "accent2": "#FF8A00",
+  "eyebrow": [
+   "IDEALISTA",
+   "ES · IT · PT"
+  ],
+  "headline": [
+   "EVERY PROPERTY.",
+   "EVERY AGENCY.",
+   "AS JSON."
+  ],
+  "lede": "Listings from <b>Spain, Italy and Portugal</b> — for sale and for rent, homes, new developments, offices, garages and land. <i>Price, price per m&sup2;, price drops, size, rooms, condition, year built and energy certificate.</i> <u>Agency profiles with phone numbers.</u>",
+  "pill": "3 COUNTRIES * PRICE DROPS * AGENCY PHONES",
+  "code": [
+   "// one dataset item per property",
+   "{",
+   ">  \"propertyCode\": \"111901446\", \"operation\": \"sale\", \"propertyType\": \"homes\",",
+   "  \"title\": \"Piso en venta en Calle del Príncipe de Vergara\",",
+   "  \"subtitle\": \"Ciudad Jardín, Madrid\",",
+   ">  \"price\": 1250000, \"priceByArea\": 8117,",
+   ">  \"priceDrop\": { \"previousPrice\": 1350000, \"percentage\": 7 },",
+   ">  \"size\": 154, \"rooms\": 4, \"bathrooms\": 2, \"yearBuilt\": 1971,",
+   "  \"floor\": \"4ª planta exterior con ascensor\", \"condition\": \"good\",",
+   ">  \"energyCertificate\": \"D\", \"reference\": \"DG 220077\", \"numPhotos\": 28,",
+   "  \"features\": [\"154 m² construidos\", \"4 habitaciones\", \"2 baños\", \"Terraza\"],",
+   "  \"images\": [{ \"url\": \"https://img4.idealista.com/...\" }, ... ]",
+   "}   // + agency mode: name, phone, listings"
+  ]
+ },
+ "booking-all-in-one-scraper": {
+  "actor": "booking-all-in-one-scraper",
+  "accent": "#0071C2",
+  "accent2": "#FFB700",
+  "eyebrow": [
+   "BOOKING.COM",
+   "6 MODES"
+  ],
+  "headline": [
+   "EVERY HOTEL.",
+   "EVERY PRICE.",
+   "AS JSON."
+  ],
+  "lede": "One Actor instead of a stack of single-purpose tools: <b>hotel search, room-level prices with a calendar up to 365 days ahead, reviews, hotel details and host / owner data</b>. <i>Rating, review count, star class, coordinates and distance from the centre.</i> <u>No login, no Booking API key.</u>",
+  "pill": "6 MODES * 365-DAY PRICE CALENDAR",
+  "code": [
+   "// scrapeType: \"search\" · one item per property",
+   "{",
+   ">  \"dataType\": \"property\", \"name\": \"Mercure Amsterdam Sloterdijk Station\",",
+   ">  \"stars\": 4, \"rating\": 8.6, \"ratingLabel\": \"Excellent\", \"reviewsCount\": 4177,",
+   ">  \"price\": 126.21, \"priceRounded\": \"$126\", \"currency\": \"USD\",",
+   "  \"city\": \"Amsterdam\", \"countryCode\": \"nl\",",
+   "  \"latitude\": 52.387911, \"longitude\": 4.834296,",
+   ">  \"distanceFromCenter\": \"4.3 km from downtown\",",
+   "  \"hostType\": \"PROFESSIONAL\", \"isSoldOut\": false,",
+   "  \"image\": \"https://cf.bstatic.com/xdata/images/hotel/square600/873579185.webp\"",
+   "}",
+   "// + prices (calendar), reviews, hotelDetails, hostInfo, all"
+  ]
+ },
+ "tripadvisor-all-in-one": {
+  "actor": "tripadvisor-all-in-one",
+  "accent": "#34E0A1",
+  "accent2": "#2D74FF",
+  "eyebrow": [
+   "TRIPADVISOR",
+   "HOTELS + FOOD"
+  ],
+  "headline": [
+   "EVERY HOTEL.",
+   "EVERY REVIEW.",
+   "AS JSON."
+  ],
+  "lede": "Paste a TripAdvisor URL, type a keyword, or just name a city — the Actor finds the places and <b>embeds each place's reviews inside its own record</b>. <i>Prices from every booking provider, deals and special offers.</i> <u>No login, no TripAdvisor API key, no proxies to configure.</u>",
+  "pill": "HOTELS * RESTAURANTS * NESTED REVIEWS",
+  "code": [
+   "// category: \"hotels\" · reviews embedded in each place",
+   "{",
+   ">  \"__type\": \"hotel\", \"locationId\": 250927,",
+   ">  \"name\": \"Hotel Europe Saint Severin\", \"accommodationType\": \"Hotel\",",
+   "  \"description\": \"Friendly and comfortable property in the Latin quarter...\",",
+   ">  \"priceRangeMin\": 149, \"priceRangeMax\": 320, \"finalPrice\": \"$221\",",
+   ">  \"dealsCount\": 11, \"specialOffer\": \"BOOK DIRECT & SAVE 15%\",",
+   "  \"bookingProvider\": \"all.accor.com\",",
+   "  \"offers\": [{ \"provider\": \"Hotels.com\", \"displayPrice\": \"$221\",",
+   "    \"basePrice\": 221, \"currency\": \"USD\", \"isSupplierDirect\": false }, ... ],",
+   ">  \"reviews\": [{ \"rating\": 5, \"title\": \"...\", \"text\": \"...\" }, ... ]",
+   "}   // + restaurants, attractions"
+  ]
+ }
+}

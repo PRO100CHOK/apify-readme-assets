@@ -1,0 +1,33 @@
+{
+ "actor": "semrush-scraper",
+ "accent": "#FF642D",
+ "accent2": "#2D74FF",
+ "eyebrow": [
+  "SEMRUSH",
+  "4 MODES"
+ ],
+ "headline": [
+  "EVERY DOMAIN.",
+  "EVERY KEYWORD.",
+  "AS JSON."
+ ],
+ "lede": "Turn Semrush into a plug-in SEO data API: <b>domain overview, keyword research, site audit and top-websites ranking</b>. <i>Volume, CPC, keyword difficulty, intents, clusters, related keywords and questions</i> — flat KPI fields plus the raw nested detail. <u>No Semrush subscription.</u>",
+ "pill": "4 MODES * KEYWORD + DOMAIN DATA * NO LOGIN",
+ "code": [
+  "// mode: \"keyword\" · one dataset item per keyword",
+  "{",
+  ">  \"keyword\": \"best running shoes\", \"database\": \"us\", \"volume\": 60500,",
+  ">  \"cpc_usd\": 1.1, \"competition\": 1, \"keyword_difficulty\": 49,",
+  "  \"intents\": [\"commercial\"], \"referring_domains_median\": 11,",
+  "  \"organic_results_count\": 753000000, \"keyword_ideas_total\": 31402,",
+  "  \"volume_trend_12mo\": [44, 44, 44, 36, 44, 44, 44, 36, 44, 44, 44, 100],",
+  ">  \"volume_by_country\": [{ \"country\": \"us\", \"volume\": 60500 },",
+  ">    { \"country\": \"in\", \"volume\": 40500 }, { \"country\": \"uk\", \"volume\": 12100 }],",
+  "  \"related_keywords\": [{ \"keyword\": \"best running shoes for men\",",
+  "    \"volume\": 33100, \"keyword_difficulty\": 45 }, ... ],",
+  ">  \"questions\": [{ \"keyword\": \"what are the best running shoes\",",
+  ">    \"volume\": 2400, \"keyword_difficulty\": 42 }, ... ],",
+  "  \"clusters\": [...]   // + domain, seo_audit and top_websites modes",
+  "}"
+ ]
+}

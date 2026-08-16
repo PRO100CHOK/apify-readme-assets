@@ -1,0 +1,30 @@
+{
+ "actor": "instagram-scraper-all-in-one",
+ "accent": "#E1306C",
+ "accent2": "#F77737",
+ "eyebrow": [
+  "INSTAGRAM",
+  "15 MODES"
+ ],
+ "headline": [
+  "EVERY POST.",
+  "EVERY FOLLOWER.",
+  "AS JSON."
+ ],
+ "lede": "<b>Profiles, posts, reels, comments, likes, followers, following, tagged, stories, highlights, hashtags, locations and search</b> — 15 modes in one Actor. <i>Emails and phones pulled out of bios</i> for lead-gen. <u>Most modes need no login at all.</u>",
+ "pill": "15 MODES * BIO CONTACTS * NO API KEY",
+ "code": [
+  "// scrapeType: \"profile\" · one item per profile",
+  "{",
+  ">  \"username\": \"nasa\", \"fullName\": \"NASA\", \"id\": \"528817151\",",
+  "  \"biography\": \"Exploring the universe and our home planet.\",",
+  ">  \"followersCount\": 104409417, \"followsCount\": 78, \"postsCount\": 4828,",
+  "  \"externalUrl\": \"https://www.nasa.gov\", \"bioLinks\": [\"https://www.nasa.gov\"],",
+  ">  \"isVerified\": true, \"isPrivate\": false, \"isBusinessAccount\": true,",
+  "  \"category\": \"Government organization\",",
+  "  \"profilePicUrl\": \"https://instagram.f...jpg\"",
+  "}",
+  "// + posts, reels, comments, likes, followers, following, tagged,",
+  "//   stories, highlights, hashtag, location, search, contacts"
+ ]
+}

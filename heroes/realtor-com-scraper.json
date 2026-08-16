@@ -1,0 +1,31 @@
+{
+ "actor": "realtor-com-scraper",
+ "accent": "#D92228",
+ "accent2": "#2D74FF",
+ "eyebrow": [
+  "REALTOR.COM",
+  "3 MODES"
+ ],
+ "headline": [
+  "EVERY LISTING.",
+  "EVERY AGENT.",
+  "AS JSON."
+ ],
+ "lede": "<b>Search (~70 fields), full property details (90+ fields) and agent profiles</b> — plus data no other scraper returns: <i>client reviews and star ratings, building permit history and neighborhood price medians</i>. <u>From $1.50 per 1,000 results.</u>",
+ "pill": "3 MODES * PERMITS * AGENT REVIEWS",
+ "code": [
+  "// scrapeType: \"search\" · ~70 fields per listing",
+  "{",
+  ">  \"propertyId\": \"8742581034\", \"status\": \"for_sale\",",
+  "  \"addressLine\": \"5611 Meadow Crst\", \"city\": \"Austin\", \"stateCode\": \"TX\",",
+  ">  \"listPrice\": 372000, \"pricePerSqft\": 233, \"daysOnMarket\": 37,",
+  ">  \"beds\": 3, \"baths\": 2, \"sqft\": 1600, \"lotSqft\": 7187, \"yearBuilt\": 1988,",
+  "  \"propertyType\": \"single_family\", \"photoCount\": 29,",
+  ">  \"agentName\": \"Tarek Boulbol\", \"agentPhone\": \"5125522198\",",
+  "  \"officeName\": \"Texas Premier Realty\",",
+  ">  \"estimate\": 365138, \"estimateSource\": \"Quantarium\",",
+  "  \"neighborhoodMedianListPrice\": 374950,",
+  "  \"neighborhoodMedianDaysOnMarket\": 69",
+  "}   // + propertyDetail (90+ fields, permits), agents"
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "actor": "rednote-xiaohongshu-scraper",
+ "accent": "#FF2442",
+ "accent2": "#FF8A00",
+ "eyebrow": [
+  "REDNOTE 小红书",
+  "8 MODES"
+ ],
+ "headline": [
+  "EVERY NOTE.",
+  "EVERY CREATOR.",
+  "AS JSON."
+ ],
+ "lede": "<b>Trending category feeds, full note details, comment threads, creator profiles, creator notes, keyword research and search</b> — eight modes in one Actor. <i>Likes, collects, shares, hashtags, topics and IP location</i> on every note. <u>No login, no cookies.</u>",
+ "pill": "8 MODES * NOTES + CREATORS + COMMENTS",
+ "code": [
+  "// scrapeType: \"discoverFeed\" · one item per note",
+  "{",
+  ">  \"noteId\": \"6453436d000000000800c87b\", \"noteType\": \"image\",",
+  ">  \"title\": \"芭蕾舞女孩蛋糕 六寸蛋糕 女生蛋糕\",",
+  ">  \"likes\": 23, \"collects\": 15, \"commentsCount\": 4, \"shares\": 4,",
+  "  \"engagementTotal\": 46, \"publishedAt\": \"2023-05-04T05:32:29Z\",",
+  ">  \"ipLocation\": \"河南\", \"authorName\": \"宸一烘焙\",",
+  "  \"authorId\": \"55878481f5a2632c8480b32f\",",
+  "  \"hashtags\": [\"蛋糕\", \"最好吃的奶油蛋糕\", \"生日蛋糕\", \"定制蛋糕\"],",
+  "  \"topics\": [{ \"id\": \"53cb2602b4c4d60d1602cc2a\", \"name\": \"蛋糕\" }]",
+  "}",
+  "// + noteDetails, noteComments, userProfiles, userNotes,",
+  "//   keywordResearch, searchNotes, searchUsers"
+ ]
+}

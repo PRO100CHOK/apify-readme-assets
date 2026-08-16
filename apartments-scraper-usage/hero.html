@@ -1,0 +1,96 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:760px; }
+  body { background:#08090B; font-family:"Helvetica Neue", Arial, "Segoe UI", sans-serif;
+         -webkit-font-smoothing:antialiased; position:relative; overflow:hidden; }
+  .grid { position:absolute; inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+                     linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+    background-size:38px 38px; }
+  .glow { position:absolute; top:-190px; left:-170px; width:660px; height:560px;
+    background:radial-gradient(closest-side, #F2652238, #F2652200); }
+  .glow2 { position:absolute; top:230px; right:-220px; width:540px; height:480px;
+    background:radial-gradient(closest-side, #0BA5EC1E, #0BA5EC00); }
+  .wrap { position:relative; padding:44px 45px 46px; }
+
+  .eyebrow { display:flex; align-items:center; gap:11px; margin-bottom:22px; }
+  .dot { width:9px; height:9px; border-radius:50%; background:#F26522;
+         box-shadow:0 0 14px 3px #F26522A6; }
+  .eyebrow span { font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13px; font-weight:700; letter-spacing:.20em; color:#F26522; }
+  .eyebrow span em { font-style:normal; color:#6E7681; }
+
+  h1 { line-height:.94; letter-spacing:-.035em; font-weight:800; }
+  h1 div { font-size:59px; }
+  .l1 { color:#FFFFFF; } .l2 { color:#F26522; } .l3 { color:#6E7681; }
+
+  p.lede { margin-top:28px; font-size:17.5px; line-height:1.52; color:#C9CDD3; max-width:655px; }
+  p.lede b { color:#FFFFFF; font-weight:700; }
+  p.lede i { font-style:normal; color:#F26522; font-weight:700; }
+  p.lede u { text-decoration:none; color:#0BA5EC; font-weight:700; }
+
+  .badges { margin-top:30px; display:flex; align-items:center; gap:16px; }
+  .pill { border:1px solid #F2652273; border-radius:999px; padding:9px 18px;
+    font-family:"Cascadia Mono", Consolas, monospace; font-size:12px; font-weight:700;
+    letter-spacing:.11em; color:#F26522; background:#F2652212; }
+  .runs { font-family:"Cascadia Mono", Consolas, monospace; font-size:12px;
+    letter-spacing:.11em; color:#6E7681; }
+  .runs b { color:#E6E8EB; } .sep { color:#3A3F46; }
+
+  .term { margin-top:42px; border:1px solid #23262B; border-radius:12px;
+    background:#0C0E11; overflow:hidden; }
+  .bar { display:flex; align-items:center; gap:9px; padding:12px 16px;
+    border-bottom:1px solid #1B1E23; background:#101317; }
+  .b { width:11px; height:11px; border-radius:50%; }
+  .b1{background:#FF5F57} .b2{background:#FEBC2E} .b3{background:#28C840}
+  .path { margin-left:9px; font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:12.5px; letter-spacing:.05em; color:#6E7681; }
+  .live { margin-left:auto; display:flex; align-items:center; gap:6px;
+    border:1px solid rgba(40,200,64,.35); border-radius:999px; padding:4px 11px;
+    background:rgba(40,200,64,.08); font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:10.5px; font-weight:700; letter-spacing:.11em; color:#28C840; }
+  .live .d { width:6px; height:6px; border-radius:50%; background:#28C840; }
+
+  pre { padding:18px 20px 20px; font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13.2px; line-height:1.76; color:#C9CDD3; white-space:normal; }
+  /* every source line is its own block, so no stray blank rows */
+  .ln { display:block; white-space:pre; }
+  .hl { background:#F265221C; box-shadow:inset 3px 0 0 #F26522; margin:0 -20px;
+        padding:0 20px 0 17px; }
+  .c { color:#5A616B; } .k { color:#79C0FF; } .s { color:#7EE787; }
+  .n { color:#FFA657; } .p { color:#8B949E; }
+</style></head>
+<body>
+  <div class="grid"></div><div class="glow"></div><div class="glow2"></div>
+  <div class="wrap">
+    <div class="eyebrow"><div class="dot"></div>
+      <span>APARTMENTS.COM <em>/</em> 3 ACTIONS</span></div>
+    <h1><div class="l1">EVERY RENTAL.</div><div class="l2">EVERY CONTACT.</div><div class="l3">AS JSON.</div></h1>
+    <p class="lede"><b>Search listings, full property details (120+ fields) and contact emails scraped straight from property websites</b>. <i>Walk, transit and bike scores, floor plans, fees, amenities, schools and photos.</i> <u>Chain the three actions together with a dataset ID.</u></p>
+    <div class="badges">
+      <div class="pill">3 ACTIONS &bull; 120+ FIELDS &bull; EMAILS</div><div class="sep">&bull;</div>
+      <div class="runs">RUNS ON <b>APIFY</b></div>
+    </div>
+    <div class="term">
+      <div class="bar">
+        <div class="b b1"></div><div class="b b2"></div><div class="b b3"></div>
+        <div class="path">~/apartments-scraper-usage</div>
+        <div class="live"><div class="d"></div>LIVE</div>
+      </div>
+      <pre><span class="ln"><span class="c">// action 1: search listings · one item per property</span></span
+        ><span class="ln"><span class="p">{</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;name&quot;</span><span class="p">: </span><span class="s">&quot;The Max&quot;</span><span class="p">, </span><span class="k">&quot;listingId&quot;</span><span class="p">: </span><span class="s">&quot;abc123&quot;</span><span class="p">, </span><span class="k">&quot;position&quot;</span><span class="p">: </span><span class="n">1</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;address&quot;</span><span class="p">: { </span><span class="k">&quot;full&quot;</span><span class="p">: </span><span class="s">&quot;100 W 57th St, New York, NY 10019&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">    </span><span class="k">&quot;city&quot;</span><span class="p">: </span><span class="s">&quot;New York&quot;</span><span class="p">, </span><span class="k">&quot;state&quot;</span><span class="p">: </span><span class="s">&quot;NY&quot;</span><span class="p">, </span><span class="k">&quot;zip&quot;</span><span class="p">: </span><span class="s">&quot;10019&quot;</span><span class="p"> },</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;rentRollup&quot;</span><span class="p">: [{ </span><span class="k">&quot;beds&quot;</span><span class="p">: </span><span class="s">&quot;Studio&quot;</span><span class="p">, </span><span class="k">&quot;price&quot;</span><span class="p">: </span><span class="s">&quot;$3,917+&quot;</span><span class="p"> },</span></span
+        ><span class="ln hl"><span class="p">    { </span><span class="k">&quot;beds&quot;</span><span class="p">: </span><span class="s">&quot;1 Bed&quot;</span><span class="p">, </span><span class="k">&quot;price&quot;</span><span class="p">: </span><span class="s">&quot;$5,639&quot;</span><span class="p"> }, { </span><span class="k">&quot;beds&quot;</span><span class="p">: </span><span class="s">&quot;2 Beds&quot;</span><span class="p">, </span><span class="k">&quot;price&quot;</span><span class="p">: </span><span class="s">&quot;$8,122&quot;</span><span class="p"> }],</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;priceMin&quot;</span><span class="p">: </span><span class="n">3917</span><span class="p">, </span><span class="k">&quot;priceMax&quot;</span><span class="p">: </span><span class="n">8122</span><span class="p">, </span><span class="k">&quot;phone&quot;</span><span class="p">: </span><span class="s">&quot;(929) 552-4351&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;amenities&quot;</span><span class="p">: [</span><span class="s">&quot;Pets Allowed&quot;</span><span class="p">, </span><span class="s">&quot;Fitness Center&quot;</span><span class="p">, </span><span class="s">&quot;In Unit Washer &amp; Dryer&quot;</span><span class="p">],</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;managementCompany&quot;</span><span class="p">: </span><span class="s">&quot;UDR&quot;</span><span class="p">, </span><span class="k">&quot;photoCount&quot;</span><span class="p">: </span><span class="n">21</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;hasVideo&quot;</span><span class="p">: </span><span class="n">true</span><span class="p">, </span><span class="k">&quot;has3DTour&quot;</span><span class="p">: </span><span class="n">true</span><span class="p">, </span><span class="k">&quot;hasSpecials&quot;</span><span class="p">: </span><span class="n">true</span><span class="p">, </span><span class="k">&quot;tier&quot;</span><span class="p">: </span><span class="s">&quot;diamond&quot;</span></span
+        ><span class="ln"><span class="p">}</span></span
+        ><span class="ln"><span class="c">// + action 2: property details (120+ fields) · action 3: emails</span></span></pre>
+    </div>
+  </div>
+</body></html>

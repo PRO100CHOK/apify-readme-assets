@@ -1,0 +1,30 @@
+{
+ "actor": "tiktok-shop-scraper-usage",
+ "accent": "#25F4EE",
+ "accent2": "#FE2C55",
+ "eyebrow": [
+  "TIKTOK SHOP",
+  "6 MODES"
+ ],
+ "headline": [
+  "EVERY PRODUCT.",
+  "EVERY SELLER.",
+  "AS JSON."
+ ],
+ "lede": "<b>Search, product details, reviews, category pages, stores and creator profiles</b> — six modes, each with its own input section. <i>Price, discount, sales volume, rating and seller data</i> on every product card, plus <u>store analytics with GMV estimation.</u>",
+ "pill": "6 MODES * SALES VOLUME * GMV ESTIMATES",
+ "code": [
+  "// scrapeType: \"search\" · one item per product card",
+  "{",
+  ">  \"productId\": \"1729595536444134138\", \"type\": \"product_card\",",
+  ">  \"title\": \"HydroJug Sport 32oz Portable Water Bottle\",",
+  ">  \"currentPrice\": \"24.99\", \"originalPrice\": \"29.99\", \"discountPercent\": \"-17%\",",
+  ">  \"salesVolume\": 5200, \"rating\": 4.8, \"reviewCount\": \"342\",",
+  "  \"sellerName\": \"HydroJug\", \"tags\": [\"Best Seller\", \"Free Shipping\"],",
+  "  \"searchRank\": 1, \"query\": \"water bottle\",",
+  "  \"productUrl\": \"https://shop.tiktok.com/us/pdp/hydrojug-sport-32oz/...\",",
+  "  \"imageUrls\": [\"https://...\"]",
+  "}",
+  "// + product, reviews, category, store (GMV), creator"
+ ]
+}

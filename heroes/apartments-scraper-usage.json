@@ -1,0 +1,31 @@
+{
+ "actor": "apartments-scraper-usage",
+ "accent": "#F26522",
+ "accent2": "#0BA5EC",
+ "eyebrow": [
+  "APARTMENTS.COM",
+  "3 ACTIONS"
+ ],
+ "headline": [
+  "EVERY RENTAL.",
+  "EVERY CONTACT.",
+  "AS JSON."
+ ],
+ "lede": "<b>Search listings, full property details (120+ fields) and contact emails scraped straight from property websites</b>. <i>Walk, transit and bike scores, floor plans, fees, amenities, schools and photos.</i> <u>Chain the three actions together with a dataset ID.</u>",
+ "pill": "3 ACTIONS * 120+ FIELDS * EMAILS",
+ "code": [
+  "// action 1: search listings · one item per property",
+  "{",
+  ">  \"name\": \"The Max\", \"listingId\": \"abc123\", \"position\": 1,",
+  "  \"address\": { \"full\": \"100 W 57th St, New York, NY 10019\",",
+  "    \"city\": \"New York\", \"state\": \"NY\", \"zip\": \"10019\" },",
+  ">  \"rentRollup\": [{ \"beds\": \"Studio\", \"price\": \"$3,917+\" },",
+  ">    { \"beds\": \"1 Bed\", \"price\": \"$5,639\" }, { \"beds\": \"2 Beds\", \"price\": \"$8,122\" }],",
+  ">  \"priceMin\": 3917, \"priceMax\": 8122, \"phone\": \"(929) 552-4351\",",
+  "  \"amenities\": [\"Pets Allowed\", \"Fitness Center\", \"In Unit Washer & Dryer\"],",
+  "  \"managementCompany\": \"UDR\", \"photoCount\": 21,",
+  ">  \"hasVideo\": true, \"has3DTour\": true, \"hasSpecials\": true, \"tier\": \"diamond\"",
+  "}",
+  "// + action 2: property details (120+ fields) · action 3: emails"
+ ]
+}

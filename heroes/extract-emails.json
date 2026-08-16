@@ -1,0 +1,31 @@
+{
+ "actor": "extract-emails",
+ "accent": "#10B981",
+ "accent2": "#2D74FF",
+ "eyebrow": [
+  "WEBSITE CONTACTS",
+  "BULK CRAWL"
+ ],
+ "headline": [
+  "EVERY EMAIL.",
+  "EVERY PHONE.",
+  "AS JSON."
+ ],
+ "lede": "Bulk <b>email extractor, phone-number scraper and social-profile finder</b> in one: crawl <i>up to 100 domains per run in parallel</i>, decode obfuscated addresses and validate real phone numbers. <u>$1 per 1,000 domains — domains that return nothing are not charged.</u>",
+ "pill": "100 DOMAINS / RUN * EMAILS + PHONES + SOCIALS",
+ "code": [
+  "// one dataset item per domain crawled",
+  "{",
+  ">  \"domain\": \"example.com\", \"url\": \"https://example.com\",",
+  ">  \"emails\": [\"info@example.com\", \"sales@example.com\"],",
+  "  \"externalEmails\": [\"studio@design-partner.com\"],",
+  ">  \"phones\": [\"+41441234567\"],",
+  "  \"socialLinks\": {",
+  "    \"facebook\": \"https://facebook.com/example\",",
+  "    \"twitter\": \"https://x.com/example\",",
+  ">    \"linkedin\": \"https://linkedin.com/company/example\",",
+  "    \"instagram\": null, \"youtube\": null, \"tiktok\": null, \"github\": null },",
+  ">  \"pagesScanned\": 12, \"scrapedAt\": \"2026-07-05T12:00:00.000Z\"",
+  "}"
+ ]
+}
