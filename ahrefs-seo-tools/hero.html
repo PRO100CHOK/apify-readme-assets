@@ -1,168 +1,98 @@
 <!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<style>
+<html><head><meta charset="utf-8"><style>
   * { margin:0; padding:0; box-sizing:border-box; }
   html, body { width:760px; }
-  body {
-    background:#08090B;
-    font-family:"Helvetica Neue", Arial, "Segoe UI", sans-serif;
-    -webkit-font-smoothing:antialiased;
-    position:relative;
-    overflow:hidden;
-  }
-  .grid {
-    position:absolute; inset:0;
-    background-image:
-      linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
-    background-size:38px 38px;
-  }
-  .glow {
-    position:absolute; top:-190px; left:-170px;
-    width:660px; height:560px;
-    background:radial-gradient(closest-side, rgba(45,116,255,.22), rgba(45,116,255,0));
-  }
-  .glow2 {
-    position:absolute; top:230px; right:-220px;
-    width:540px; height:480px;
-    background:radial-gradient(closest-side, rgba(255,138,0,.11), rgba(255,138,0,0));
-  }
+  body { background:#08090B; font-family:"Helvetica Neue", Arial, "Segoe UI", sans-serif;
+         -webkit-font-smoothing:antialiased; position:relative; overflow:hidden; }
+  .grid { position:absolute; inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+                     linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+    background-size:38px 38px; }
+  .glow { position:absolute; top:-190px; left:-170px; width:660px; height:560px;
+    background:radial-gradient(closest-side, #2D74FF38, #2D74FF00); }
+  .glow2 { position:absolute; top:230px; right:-220px; width:540px; height:480px;
+    background:radial-gradient(closest-side, #FF8A001E, #FF8A0000); }
   .wrap { position:relative; padding:44px 45px 46px; }
 
   .eyebrow { display:flex; align-items:center; gap:11px; margin-bottom:22px; }
-  .dot { width:9px; height:9px; border-radius:50%; background:#2D74FF; box-shadow:0 0 14px 3px rgba(45,116,255,.65); }
-  .eyebrow span {
-    font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
-    font-size:13px; font-weight:700; letter-spacing:.20em; color:#2D74FF;
-  }
+  .dot { width:9px; height:9px; border-radius:50%; background:#2D74FF;
+         box-shadow:0 0 14px 3px #2D74FFA6; }
+  .eyebrow span { font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13px; font-weight:700; letter-spacing:.20em; color:#2D74FF; }
   .eyebrow span em { font-style:normal; color:#6E7681; }
 
   h1 { line-height:.94; letter-spacing:-.035em; font-weight:800; }
   h1 div { font-size:59px; }
-  .l1 { color:#FFFFFF; }
-  .l2 { color:#2D74FF; }
-  .l3 { color:#6E7681; }
+  .l1 { color:#FFFFFF; } .l2 { color:#2D74FF; } .l3 { color:#6E7681; }
 
-  p.lede {
-    margin-top:28px;
-    font-size:17.5px; line-height:1.52; color:#C9CDD3; max-width:655px;
-  }
+  p.lede { margin-top:28px; font-size:17.5px; line-height:1.52; color:#C9CDD3; max-width:655px; }
   p.lede b { color:#FFFFFF; font-weight:700; }
   p.lede i { font-style:normal; color:#2D74FF; font-weight:700; }
   p.lede u { text-decoration:none; color:#FF8A00; font-weight:700; }
 
   .badges { margin-top:30px; display:flex; align-items:center; gap:16px; }
-  .pill {
-    border:1px solid rgba(45,116,255,.45); border-radius:999px;
-    padding:9px 18px;
-    font-family:"Cascadia Mono", Consolas, monospace;
-    font-size:12px; font-weight:700; letter-spacing:.11em; color:#2D74FF;
-    background:rgba(45,116,255,.07);
-  }
-  .runs {
-    font-family:"Cascadia Mono", Consolas, monospace;
-    font-size:12px; letter-spacing:.11em; color:#6E7681;
-  }
-  .runs b { color:#E6E8EB; }
-  .sep { color:#3A3F46; }
+  .pill { border:1px solid #2D74FF73; border-radius:999px; padding:9px 18px;
+    font-family:"Cascadia Mono", Consolas, monospace; font-size:12px; font-weight:700;
+    letter-spacing:.11em; color:#2D74FF; background:#2D74FF12; }
+  .runs { font-family:"Cascadia Mono", Consolas, monospace; font-size:12px;
+    letter-spacing:.11em; color:#6E7681; }
+  .runs b { color:#E6E8EB; } .sep { color:#3A3F46; }
 
-  .term {
-    margin-top:42px;
-    border:1px solid #23262B; border-radius:12px;
-    background:#0C0E11; overflow:hidden;
-  }
-  .bar {
-    display:flex; align-items:center; gap:9px;
-    padding:12px 16px; border-bottom:1px solid #1B1E23; background:#101317;
-  }
+  .term { margin-top:42px; border:1px solid #23262B; border-radius:12px;
+    background:#0C0E11; overflow:hidden; }
+  .bar { display:flex; align-items:center; gap:9px; padding:12px 16px;
+    border-bottom:1px solid #1B1E23; background:#101317; }
   .b { width:11px; height:11px; border-radius:50%; }
-  .b1{background:#FF5F57}.b2{background:#FEBC2E}.b3{background:#28C840}
-  .path {
-    margin-left:9px;
-    font-family:"Cascadia Mono", Consolas, monospace;
-    font-size:12.5px; letter-spacing:.05em; color:#6E7681;
-  }
-  .live {
-    margin-left:auto; display:flex; align-items:center; gap:6px;
-    border:1px solid rgba(40,200,64,.35); border-radius:999px;
-    padding:4px 11px; background:rgba(40,200,64,.08);
-    font-family:"Cascadia Mono", Consolas, monospace;
-    font-size:10.5px; font-weight:700; letter-spacing:.11em; color:#28C840;
-  }
+  .b1{background:#FF5F57} .b2{background:#FEBC2E} .b3{background:#28C840}
+  .path { margin-left:9px; font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:12.5px; letter-spacing:.05em; color:#6E7681; }
+  .live { margin-left:auto; display:flex; align-items:center; gap:6px;
+    border:1px solid rgba(40,200,64,.35); border-radius:999px; padding:4px 11px;
+    background:rgba(40,200,64,.08); font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:10.5px; font-weight:700; letter-spacing:.11em; color:#28C840; }
   .live .d { width:6px; height:6px; border-radius:50%; background:#28C840; }
 
-  pre {
-    padding:18px 20px 20px;
-    font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
-    font-size:13.2px; line-height:1.76; color:#C9CDD3;
-    white-space:normal;
-  }
+  pre { padding:18px 20px 20px; font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13.2px; line-height:1.76; color:#C9CDD3; white-space:normal; }
   /* every source line is its own block, so no stray blank rows */
   .ln { display:block; white-space:pre; }
-  .hl { background:rgba(45,116,255,.11); box-shadow:inset 3px 0 0 #2D74FF;
-        margin:0 -20px; padding:0 20px 0 17px; }
-  .c  { color:#5A616B; }
-  .k  { color:#79C0FF; }
-  .s  { color:#7EE787; }
-  .n  { color:#FFA657; }
-  .p  { color:#8B949E; }
-</style>
-</head>
+  .hl { background:#2D74FF1C; box-shadow:inset 3px 0 0 #2D74FF; margin:0 -20px;
+        padding:0 20px 0 17px; }
+  .c { color:#5A616B; } .k { color:#79C0FF; } .s { color:#7EE787; }
+  .n { color:#FFA657; } .p { color:#8B949E; }
+</style></head>
 <body>
-  <div class="grid"></div>
-  <div class="glow"></div>
-  <div class="glow2"></div>
-
+  <div class="grid"></div><div class="glow"></div><div class="glow2"></div>
   <div class="wrap">
-    <div class="eyebrow">
-      <div class="dot"></div>
-      <span>AHREFS <em>/</em> 16 SEO TOOLS</span>
-    </div>
-
-    <h1>
-      <div class="l1">EVERY METRIC.</div>
-      <div class="l2">EVERY KEYWORD.</div>
-      <div class="l3">AS JSON.</div>
-    </h1>
-
-    <p class="lede">
-      Pull <b>Domain Rating, backlinks, keyword volume, KD, CPC, SERPs, traffic and AI
-      visibility</b> straight out of the Ahrefs free tools — plus <i>keyword ideas across
-      20 search engines</i> including ChatGPT, Gemini and Perplexity.
-      <u>No Ahrefs subscription.</u> No browser, captcha solving built in.
-    </p>
-
+    <div class="eyebrow"><div class="dot"></div>
+      <span>AHREFS <em>/</em> 16 SEO TOOLS</span></div>
+    <h1><div class="l1">EVERY METRIC.</div><div class="l2">EVERY KEYWORD.</div><div class="l3">AS JSON.</div></h1>
+    <p class="lede">Pull <b>Domain Rating, backlinks, keyword volume, KD, CPC, SERPs, traffic and AI visibility</b> straight out of the Ahrefs free tools — plus <i>keyword ideas across 20 search engines</i> including ChatGPT, Gemini and Perplexity. <u>No Ahrefs subscription.</u> No browser, captcha solving built in.</p>
     <div class="badges">
-      <div class="pill">16 TOOLS &bull; 20 ENGINES &bull; BULK URLS</div>
-      <div class="sep">&bull;</div>
+      <div class="pill">16 TOOLS &bull; 20 ENGINES &bull; BULK URLS</div><div class="sep">&bull;</div>
       <div class="runs">RUNS ON <b>APIFY</b></div>
     </div>
-
     <div class="term">
       <div class="bar">
         <div class="b b1"></div><div class="b b2"></div><div class="b b3"></div>
         <div class="path">~/ahrefs-seo-tools</div>
         <div class="live"><div class="d"></div>LIVE</div>
       </div>
-      <pre><span class="ln c">// searchType: "keyword_metrics" &middot; one dataset item per request</span
-        ><span class="ln p">[{</span
-        ><span class="ln">  <span class="k">"searchType"</span><span class="p">:</span> <span class="s">"keyword_metrics"</span><span class="p">,</span> <span class="k">"country"</span><span class="p">:</span> <span class="s">"us"</span><span class="p">,</span></span
-        ><span class="ln hl">  <span class="k">"keyword"</span><span class="p">:</span> <span class="s">"seo tools"</span><span class="p">,</span> <span class="k">"searchVolume"</span><span class="p">:</span> <span class="n">33000</span><span class="p">,</span></span
-        ><span class="ln hl">  <span class="k">"difficulty"</span><span class="p">:</span> <span class="n">79</span><span class="p">,</span> <span class="k">"estimatedCpcUsd"</span><span class="p">:</span> <span class="n">3.16</span><span class="p">,</span> <span class="k">"trafficPotential"</span><span class="p">:</span> <span class="n">57735</span><span class="p">,</span></span
-        ><span class="ln c">  // top-10 SERP, per-result Ahrefs metrics</span
-        ><span class="ln">  <span class="k">"serpResults"</span><span class="p">:</span> <span class="p">[{</span> <span class="k">"position"</span><span class="p">:</span> <span class="n">2</span><span class="p">,</span> <span class="k">"url"</span><span class="p">:</span> <span class="s">"https://zapier.com/blog/..."</span><span class="p">,</span></span
-        ><span class="ln hl">    <span class="k">"domainRating"</span><span class="p">:</span> <span class="n">91</span><span class="p">,</span> <span class="k">"urlRating"</span><span class="p">:</span> <span class="n">9</span><span class="p">,</span> <span class="k">"backlinks"</span><span class="p">:</span> <span class="n">3508</span><span class="p">,</span></span
-        ><span class="ln hl">    <span class="k">"referringDomains"</span><span class="p">:</span> <span class="n">411</span><span class="p">,</span> <span class="k">"traffic"</span><span class="p">:</span> <span class="n">57735</span><span class="p">,</span> <span class="k">"keywords"</span><span class="p">:</span> <span class="n">1565</span></span
-        ><span class="ln">  <span class="p">},</span> <span class="c">... 9 more results]</span></span
-        ><span class="ln"><span class="p">},</span> <span class="p">{</span> <span class="c">// searchType: "ai_visibility" &middot; citations per AI model</span></span
-        ><span class="ln hl">  <span class="k">"brand"</span><span class="p">:</span> <span class="s">"ahrefs.com"</span><span class="p">,</span> <span class="k">"totalAiCitations"</span><span class="p">:</span> <span class="n">2103</span><span class="p">,</span></span
-        ><span class="ln">  <span class="k">"citationsByModel"</span><span class="p">:</span> <span class="p">[{</span> <span class="k">"model"</span><span class="p">:</span> <span class="s">"Perplexity"</span><span class="p">,</span> <span class="k">"count"</span><span class="p">:</span> <span class="n">13</span> <span class="p">},</span></span
-        ><span class="ln">    <span class="p">{</span> <span class="k">"model"</span><span class="p">:</span> <span class="s">"GoogleAIOverviews"</span><span class="p">,</span> <span class="k">"count"</span><span class="p">:</span> <span class="n">245</span> <span class="p">},</span> <span class="c">... ]</span></span
-        ><span class="ln"><span class="p">},</span> <span class="c">... website_authority, backlinks_list, traffic_overview, top_websites]</span></span
-      ></pre>
+      <pre><span class="ln"><span class="c">// searchType: &quot;keyword_metrics&quot; · one dataset item per request</span></span
+        ><span class="ln"><span class="p">[{</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;searchType&quot;</span><span class="p">: </span><span class="s">&quot;keyword_metrics&quot;</span><span class="p">, </span><span class="k">&quot;country&quot;</span><span class="p">: </span><span class="s">&quot;us&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;keyword&quot;</span><span class="p">: </span><span class="s">&quot;seo tools&quot;</span><span class="p">, </span><span class="k">&quot;searchVolume&quot;</span><span class="p">: </span><span class="n">33000</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;difficulty&quot;</span><span class="p">: </span><span class="n">79</span><span class="p">, </span><span class="k">&quot;estimatedCpcUsd&quot;</span><span class="p">: </span><span class="n">3.16</span><span class="p">, </span><span class="k">&quot;trafficPotential&quot;</span><span class="p">: </span><span class="n">57735</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="c">// top-10 SERP, per-result Ahrefs metrics</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;serpResults&quot;</span><span class="p">: [{ </span><span class="k">&quot;position&quot;</span><span class="p">: </span><span class="n">2</span><span class="p">, </span><span class="k">&quot;url&quot;</span><span class="p">: </span><span class="s">&quot;https://zapier.com/blog/...&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">    </span><span class="k">&quot;domainRating&quot;</span><span class="p">: </span><span class="n">91</span><span class="p">, </span><span class="k">&quot;urlRating&quot;</span><span class="p">: </span><span class="n">9</span><span class="p">, </span><span class="k">&quot;backlinks&quot;</span><span class="p">: </span><span class="n">3508</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">    </span><span class="k">&quot;referringDomains&quot;</span><span class="p">: </span><span class="n">411</span><span class="p">, </span><span class="k">&quot;traffic&quot;</span><span class="p">: </span><span class="n">57735</span><span class="p">, </span><span class="k">&quot;keywords&quot;</span><span class="p">: </span><span class="n">1565</span></span
+        ><span class="ln"><span class="p">  }, ... </span><span class="n">9</span><span class="p"> more results]</span></span
+        ><span class="ln"><span class="p">}, { </span><span class="c">// searchType: &quot;ai_visibility&quot; · citations per AI model</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;brand&quot;</span><span class="p">: </span><span class="s">&quot;ahrefs.com&quot;</span><span class="p">, </span><span class="k">&quot;totalAiCitations&quot;</span><span class="p">: </span><span class="n">2103</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;citationsByModel&quot;</span><span class="p">: [{ </span><span class="k">&quot;model&quot;</span><span class="p">: </span><span class="s">&quot;Perplexity&quot;</span><span class="p">, </span><span class="k">&quot;count&quot;</span><span class="p">: </span><span class="n">13</span><span class="p"> },</span></span
+        ><span class="ln"><span class="p">    { </span><span class="k">&quot;model&quot;</span><span class="p">: </span><span class="s">&quot;GoogleAIOverviews&quot;</span><span class="p">, </span><span class="k">&quot;count&quot;</span><span class="p">: </span><span class="n">245</span><span class="p"> }, ... ]</span></span
+        ><span class="ln"><span class="p">}, ... website_authority, backlinks_list, traffic_overview, top_websites]</span></span></pre>
     </div>
   </div>
-</body>
-</html>
+</body></html>

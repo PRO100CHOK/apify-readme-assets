@@ -1,0 +1,26 @@
+{
+  "actor": "ahrefs-seo-tools",
+  "accent": "#2D74FF",
+  "accent2": "#FF8A00",
+  "eyebrow": ["AHREFS", "16 SEO TOOLS"],
+  "headline": ["EVERY METRIC.", "EVERY KEYWORD.", "AS JSON."],
+  "lede": "Pull <b>Domain Rating, backlinks, keyword volume, KD, CPC, SERPs, traffic and AI visibility</b> straight out of the Ahrefs free tools \u2014 plus <i>keyword ideas across 20 search engines</i> including ChatGPT, Gemini and Perplexity. <u>No Ahrefs subscription.</u> No browser, captcha solving built in.",
+  "pill": "16 TOOLS * 20 ENGINES * BULK URLS",
+  "code": [
+    "// searchType: \"keyword_metrics\" \u00b7 one dataset item per request",
+    "[{",
+    "  \"searchType\": \"keyword_metrics\", \"country\": \"us\",",
+    ">  \"keyword\": \"seo tools\", \"searchVolume\": 33000,",
+    ">  \"difficulty\": 79, \"estimatedCpcUsd\": 3.16, \"trafficPotential\": 57735,",
+    "  // top-10 SERP, per-result Ahrefs metrics",
+    "  \"serpResults\": [{ \"position\": 2, \"url\": \"https://zapier.com/blog/...\",",
+    ">    \"domainRating\": 91, \"urlRating\": 9, \"backlinks\": 3508,",
+    ">    \"referringDomains\": 411, \"traffic\": 57735, \"keywords\": 1565",
+    "  }, ... 9 more results]",
+    "}, { // searchType: \"ai_visibility\" \u00b7 citations per AI model",
+    ">  \"brand\": \"ahrefs.com\", \"totalAiCitations\": 2103,",
+    "  \"citationsByModel\": [{ \"model\": \"Perplexity\", \"count\": 13 },",
+    "    { \"model\": \"GoogleAIOverviews\", \"count\": 245 }, ... ]",
+    "}, ... website_authority, backlinks_list, traffic_overview, top_websites]"
+  ]
+}
