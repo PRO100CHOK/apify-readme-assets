@@ -1,0 +1,37 @@
+{
+ "actor": "yelp-scraper",
+ "accent": "#D32323",
+ "accent2": "#FF1A1A",
+ "eyebrow": [
+  "YELP",
+  "BUSINESSES + REVIEWS"
+ ],
+ "headline": [
+  "EVERY LISTING.",
+  "PLUS THE EMAIL.",
+  "ONE ROW EACH."
+ ],
+ "lede": "Turn any Yelp search into a lead list — <b>name, categories, phone, website, address, coordinates, hours, amenities, licences, health inspections, photos and menus</b> — with <i>reviews nested in the same row</i> and the <u>e-mail pulled from the business's own website</u>. No Yelp API key, 27 output languages.",
+ "pill": "BUSINESSES * EMAILS * REVIEWS * MENUS * Q&A",
+ "code": [
+  "// one dataset row per business - reviews live inside it",
+  "{",
+  ">  \"name\": \"Sotto Mare\", \"rating\": 4.3, \"reviewCount\": 5978,",
+  "  \"categories\": [\"Seafood\", \"Italian\", \"Bars\", \"Restaurants\"],",
+  ">  \"phone\": \"(415) 398-3181\", \"website\": \"http://www.sottomaresf.com/\",",
+  ">  \"email\": \"sottomare@outlook.com\",",
+  ">  \"facebook\": \"https://www.facebook.com/sotto.mare.sf/\",",
+  "  \"address\": \"552 Green St, San Francisco, CA 94133, United States\",",
+  "  \"latitude\": 37.799718, \"longitude\": -122.408342, \"priceRange\": \"$$$\",",
+  "  \"isClaimed\": true, \"timezone\": \"America/Los_Angeles\",",
+  "  \"hours\": [{ \"day\": \"Mon\", \"hours\": \"11:30 AM - 9:00 PM\" }, ... ],",
+  "  \"amenities\": [\"Takes reservations\", \"Offers delivery\", ... ],",
+  "  \"healthInspections\": [{ \"score\": \"Pass\", \"date\": \"2026-02-20\" }],",
+  ">  \"menu\": [{ \"section\": \"Appetizers\", \"name\": \"Oysters on Half Shell\",",
+  "    \"price\": \"$2.00\", \"reviewCount\": 16 }, ... ],",
+  ">  \"reviews\": [{ \"rating\": 5, \"authorName\": \"Beatriz S.\",",
+  "    \"text\": \"Really enjoyed the atmosphere & food, service was good\",",
+  "    \"publishedAt\": \"2026-08-04T16:20:16-07:00\" }, ... ]",
+  "}"
+ ]
+}
