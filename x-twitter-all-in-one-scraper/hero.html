@@ -1,0 +1,98 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:760px; }
+  body { background:#08090B; font-family:"Helvetica Neue", Arial, "Segoe UI", sans-serif;
+         -webkit-font-smoothing:antialiased; position:relative; overflow:hidden; }
+  .grid { position:absolute; inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+                     linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+    background-size:38px 38px; }
+  .glow { position:absolute; top:-190px; left:-170px; width:660px; height:560px;
+    background:radial-gradient(closest-side, #1D9BF038, #1D9BF000); }
+  .glow2 { position:absolute; top:230px; right:-220px; width:540px; height:480px;
+    background:radial-gradient(closest-side, #00BA7C1E, #00BA7C00); }
+  .wrap { position:relative; padding:44px 45px 46px; }
+
+  .eyebrow { display:flex; align-items:center; gap:11px; margin-bottom:22px; }
+  .dot { width:9px; height:9px; border-radius:50%; background:#1D9BF0;
+         box-shadow:0 0 14px 3px #1D9BF0A6; }
+  .eyebrow span { font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13px; font-weight:700; letter-spacing:.20em; color:#1D9BF0; }
+  .eyebrow span em { font-style:normal; color:#6E7681; }
+
+  h1 { line-height:.94; letter-spacing:-.035em; font-weight:800; }
+  h1 div { font-size:56px; }
+  .l1 { color:#FFFFFF; } .l2 { color:#1D9BF0; } .l3 { color:#6E7681; }
+
+  p.lede { margin-top:28px; font-size:17.5px; line-height:1.52; color:#C9CDD3; max-width:655px; }
+  p.lede b { color:#FFFFFF; font-weight:700; }
+  p.lede i { font-style:normal; color:#1D9BF0; font-weight:700; }
+  p.lede u { text-decoration:none; color:#00BA7C; font-weight:700; }
+
+  .badges { margin-top:30px; display:flex; align-items:center; gap:16px; }
+  .pill { border:1px solid #1D9BF073; border-radius:999px; padding:9px 18px;
+    font-family:"Cascadia Mono", Consolas, monospace; font-size:12px; font-weight:700;
+    letter-spacing:.11em; color:#1D9BF0; background:#1D9BF012; }
+  .runs { font-family:"Cascadia Mono", Consolas, monospace; font-size:12px;
+    letter-spacing:.11em; color:#6E7681; }
+  .runs b { color:#E6E8EB; } .sep { color:#3A3F46; }
+
+  .term { margin-top:42px; border:1px solid #23262B; border-radius:12px;
+    background:#0C0E11; overflow:hidden; }
+  .bar { display:flex; align-items:center; gap:9px; padding:12px 16px;
+    border-bottom:1px solid #1B1E23; background:#101317; }
+  .b { width:11px; height:11px; border-radius:50%; }
+  .b1{background:#FF5F57} .b2{background:#FEBC2E} .b3{background:#28C840}
+  .path { margin-left:9px; font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:12.5px; letter-spacing:.05em; color:#6E7681; }
+  .live { margin-left:auto; display:flex; align-items:center; gap:6px;
+    border:1px solid rgba(40,200,64,.35); border-radius:999px; padding:4px 11px;
+    background:rgba(40,200,64,.08); font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:10.5px; font-weight:700; letter-spacing:.11em; color:#28C840; }
+  .live .d { width:6px; height:6px; border-radius:50%; background:#28C840; }
+
+  pre { padding:18px 20px 20px; font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:12.8px; line-height:1.76; color:#C9CDD3; white-space:normal; }
+  /* every source line is its own block, so no stray blank rows */
+  .ln { display:block; white-space:pre; }
+  .hl { background:#1D9BF01C; box-shadow:inset 3px 0 0 #1D9BF0; margin:0 -20px;
+        padding:0 20px 0 17px; }
+  .c { color:#5A616B; } .k { color:#79C0FF; } .s { color:#7EE787; }
+  .n { color:#FFA657; } .p { color:#8B949E; }
+</style></head>
+<body>
+  <div class="grid"></div><div class="glow"></div><div class="glow2"></div>
+  <div class="wrap">
+    <div class="eyebrow"><div class="dot"></div>
+      <span>X / TWITTER <em>/</em> 9 SCRAPE MODES</span></div>
+    <h1><div class="l1">POSTS. PROFILES.</div><div class="l2">FOLLOWERS. TRENDS.</div><div class="l3">ONE SCRAPER.</div></h1>
+    <p class="lede">Search, profiles, replies, likers, reposters, quotes, lists, communities and trends — <b>9 modes in one Actor</b>. Advanced search filters, an <i>e-mail finder</i> and <u>cursor pagination that goes deep</u>. No login, no API key, no code.</p>
+    <div class="badges">
+      <div class="pill">FROM $0.14 / 1,000 RESULTS &bull; PAY PER RESULT</div><div class="sep">&bull;</div>
+      <div class="runs">RUNS ON <b>APIFY</b></div>
+    </div>
+    <div class="term">
+      <div class="bar">
+        <div class="b b1"></div><div class="b b2"></div><div class="b b3"></div>
+        <div class="path">~/x-twitter-all-in-one-scraper</div>
+        <div class="live"><div class="d"></div>LIVE</div>
+      </div>
+      <pre><span class="ln"><span class="p">{</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;type&quot;</span><span class="p">: </span><span class="s">&quot;post&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;url&quot;</span><span class="p">: </span><span class="s">&quot;https://x.com/apify/status/2100993920599503024&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;text&quot;</span><span class="p">: </span><span class="s">&quot;Round one. Choose your fighter&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;createdAt&quot;</span><span class="p">: </span><span class="s">&quot;2026-09-18T17:02:39Z&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;likeCount&quot;</span><span class="p">: </span><span class="n">1</span><span class="p">,  </span><span class="k">&quot;repostCount&quot;</span><span class="p">: </span><span class="n">0</span><span class="p">,  </span><span class="k">&quot;replyCount&quot;</span><span class="p">: </span><span class="n">0</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;viewCount&quot;</span><span class="p">: </span><span class="n">216</span><span class="p">,  </span><span class="k">&quot;bookmarkCount&quot;</span><span class="p">: </span><span class="n">2</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;media&quot;</span><span class="p">: [{ </span><span class="k">&quot;type&quot;</span><span class="p">: </span><span class="s">&quot;video&quot;</span><span class="p">, </span><span class="k">&quot;videoUrl&quot;</span><span class="p">: </span><span class="s">&quot;...mp4&quot;</span><span class="p"> }],</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;author&quot;</span><span class="p">: {</span></span
+        ><span class="ln"><span class="p">    </span><span class="k">&quot;username&quot;</span><span class="p">: </span><span class="s">&quot;apify&quot;</span><span class="p">,  </span><span class="k">&quot;followers&quot;</span><span class="p">: </span><span class="n">15857</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">    </span><span class="k">&quot;location&quot;</span><span class="p">: </span><span class="s">&quot;The Interwebz&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">    </span><span class="k">&quot;about&quot;</span><span class="p">: { </span><span class="k">&quot;accountBasedIn&quot;</span><span class="p">: </span><span class="s">&quot;Czechia&quot;</span><span class="p"> },</span></span
+        ><span class="ln"><span class="p">    </span><span class="k">&quot;verifiedType&quot;</span><span class="p">: </span><span class="s">&quot;Business&quot;</span></span
+        ><span class="ln"><span class="p">  }</span></span
+        ><span class="ln"><span class="p">}</span></span></pre>
+    </div>
+  </div>
+</body></html>
