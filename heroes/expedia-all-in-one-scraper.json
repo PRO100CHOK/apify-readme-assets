@@ -1,0 +1,23 @@
+{
+ "actor": "expedia-all-in-one-scraper",
+ "accent": "#FDDB32",
+ "accent2": "#1668E3",
+ "eyebrow": ["EXPEDIA.COM", "HOTELS · ROOMS · REVIEWS"],
+ "headline": ["EVERY HOTEL.", "EVERY RATE.", "ONE ROW."],
+ "lede": "Search by city, landmark, Expedia search URL or hotel URL and get <b>live prices for your dates, every room and rate plan, address and coordinates, all photos, amenities, policies and FAQ</b>. <i>Rating distribution, category scores and AI review summary.</i> <u>Guest reviews nested in each hotel.</u>",
+ "pill": "SEARCH URL FILTERS KEPT * UP TO 200 HOTELS PER PAGE",
+ "code": [
+  "// one item per hotel · rooms & reviews nested",
+  "{",
+  ">  \"hotelId\": \"9104481\", \"name\": \"Hotel Gracery Shinjuku\",",
+  ">  \"starRating\": 4, \"guestRating\": 9, \"reviewCount\": 5490,",
+  ">  \"priceTotal\": 281, \"pricePerNight\": 232, \"priceStrikethrough\": 426,",
+  "  \"dealBadge\": \"Sale $145 off\", \"freeCancellation\": true,",
+  "  \"availabilityMessage\": \"We have 7 left at this price\",",
+  "  \"city\": \"Tokyo\", \"latitude\": 35.695383, \"longitude\": 139.702018,",
+  ">  \"ratingDistribution\": [{ \"rating\": 10, \"count\": 3481, \"percent\": 63 }],",
+  "  \"images\": [ … 61 photos ], \"rooms\": [ … 28 room types ],",
+  "  \"reviews\": [ … 20 reviews ]",
+  "}"
+ ]
+}

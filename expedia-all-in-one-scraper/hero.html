@@ -1,0 +1,95 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:760px; }
+  body { background:#08090B; font-family:"Helvetica Neue", Arial, "Segoe UI", sans-serif;
+         -webkit-font-smoothing:antialiased; position:relative; overflow:hidden; }
+  .grid { position:absolute; inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+                     linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+    background-size:38px 38px; }
+  .glow { position:absolute; top:-190px; left:-170px; width:660px; height:560px;
+    background:radial-gradient(closest-side, #FDDB3238, #FDDB3200); }
+  .glow2 { position:absolute; top:230px; right:-220px; width:540px; height:480px;
+    background:radial-gradient(closest-side, #1668E31E, #1668E300); }
+  .wrap { position:relative; padding:44px 45px 46px; }
+
+  .eyebrow { display:flex; align-items:center; gap:11px; margin-bottom:22px; }
+  .dot { width:9px; height:9px; border-radius:50%; background:#FDDB32;
+         box-shadow:0 0 14px 3px #FDDB32A6; }
+  .eyebrow span { font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13px; font-weight:700; letter-spacing:.20em; color:#FDDB32; }
+  .eyebrow span em { font-style:normal; color:#6E7681; }
+
+  h1 { line-height:.94; letter-spacing:-.035em; font-weight:800; }
+  h1 div { font-size:59px; }
+  .l1 { color:#FFFFFF; } .l2 { color:#FDDB32; } .l3 { color:#6E7681; }
+
+  p.lede { margin-top:28px; font-size:17.5px; line-height:1.52; color:#C9CDD3; max-width:655px; }
+  p.lede b { color:#FFFFFF; font-weight:700; }
+  p.lede i { font-style:normal; color:#FDDB32; font-weight:700; }
+  p.lede u { text-decoration:none; color:#1668E3; font-weight:700; }
+
+  .badges { margin-top:30px; display:flex; align-items:center; gap:16px; }
+  .pill { border:1px solid #FDDB3273; border-radius:999px; padding:9px 18px;
+    font-family:"Cascadia Mono", Consolas, monospace; font-size:12px; font-weight:700;
+    letter-spacing:.11em; color:#FDDB32; background:#FDDB3212; }
+  .runs { font-family:"Cascadia Mono", Consolas, monospace; font-size:12px;
+    letter-spacing:.11em; color:#6E7681; }
+  .runs b { color:#E6E8EB; } .sep { color:#3A3F46; }
+
+  .term { margin-top:42px; border:1px solid #23262B; border-radius:12px;
+    background:#0C0E11; overflow:hidden; }
+  .bar { display:flex; align-items:center; gap:9px; padding:12px 16px;
+    border-bottom:1px solid #1B1E23; background:#101317; }
+  .b { width:11px; height:11px; border-radius:50%; }
+  .b1{background:#FF5F57} .b2{background:#FEBC2E} .b3{background:#28C840}
+  .path { margin-left:9px; font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:12.5px; letter-spacing:.05em; color:#6E7681; }
+  .live { margin-left:auto; display:flex; align-items:center; gap:6px;
+    border:1px solid rgba(40,200,64,.35); border-radius:999px; padding:4px 11px;
+    background:rgba(40,200,64,.08); font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:10.5px; font-weight:700; letter-spacing:.11em; color:#28C840; }
+  .live .d { width:6px; height:6px; border-radius:50%; background:#28C840; }
+
+  pre { padding:18px 20px 20px; font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13.2px; line-height:1.76; color:#C9CDD3; white-space:normal; }
+  /* every source line is its own block, so no stray blank rows */
+  .ln { display:block; white-space:pre; }
+  .hl { background:#FDDB321C; box-shadow:inset 3px 0 0 #FDDB32; margin:0 -20px;
+        padding:0 20px 0 17px; }
+  .c { color:#5A616B; } .k { color:#79C0FF; } .s { color:#7EE787; }
+  .n { color:#FFA657; } .p { color:#8B949E; }
+</style></head>
+<body>
+  <div class="grid"></div><div class="glow"></div><div class="glow2"></div>
+  <div class="wrap">
+    <div class="eyebrow"><div class="dot"></div>
+      <span>EXPEDIA.COM <em>/</em> HOTELS · ROOMS · REVIEWS</span></div>
+    <h1><div class="l1">EVERY HOTEL.</div><div class="l2">EVERY RATE.</div><div class="l3">ONE ROW.</div></h1>
+    <p class="lede">Search by city, landmark, Expedia search URL or hotel URL and get <b>live prices for your dates, every room and rate plan, address and coordinates, all photos, amenities, policies and FAQ</b>. <i>Rating distribution, category scores and AI review summary.</i> <u>Guest reviews nested in each hotel.</u></p>
+    <div class="badges">
+      <div class="pill">SEARCH URL FILTERS KEPT &bull; UP TO 200 HOTELS PER PAGE</div><div class="sep">&bull;</div>
+      <div class="runs">RUNS ON <b>APIFY</b></div>
+    </div>
+    <div class="term">
+      <div class="bar">
+        <div class="b b1"></div><div class="b b2"></div><div class="b b3"></div>
+        <div class="path">~/expedia-all-in-one-scraper</div>
+        <div class="live"><div class="d"></div>LIVE</div>
+      </div>
+      <pre><span class="ln"><span class="c">// one item per hotel · rooms &amp; reviews nested</span></span
+        ><span class="ln"><span class="p">{</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;hotelId&quot;</span><span class="p">: </span><span class="s">&quot;9104481&quot;</span><span class="p">, </span><span class="k">&quot;name&quot;</span><span class="p">: </span><span class="s">&quot;Hotel Gracery Shinjuku&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;starRating&quot;</span><span class="p">: </span><span class="n">4</span><span class="p">, </span><span class="k">&quot;guestRating&quot;</span><span class="p">: </span><span class="n">9</span><span class="p">, </span><span class="k">&quot;reviewCount&quot;</span><span class="p">: </span><span class="n">5490</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;priceTotal&quot;</span><span class="p">: </span><span class="n">281</span><span class="p">, </span><span class="k">&quot;pricePerNight&quot;</span><span class="p">: </span><span class="n">232</span><span class="p">, </span><span class="k">&quot;priceStrikethrough&quot;</span><span class="p">: </span><span class="n">426</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;dealBadge&quot;</span><span class="p">: </span><span class="s">&quot;Sale $145 off&quot;</span><span class="p">, </span><span class="k">&quot;freeCancellation&quot;</span><span class="p">: </span><span class="n">true</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;availabilityMessage&quot;</span><span class="p">: </span><span class="s">&quot;We have 7 left at this price&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;city&quot;</span><span class="p">: </span><span class="s">&quot;Tokyo&quot;</span><span class="p">, </span><span class="k">&quot;latitude&quot;</span><span class="p">: </span><span class="n">35.695383</span><span class="p">, </span><span class="k">&quot;longitude&quot;</span><span class="p">: </span><span class="n">139.702018</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;ratingDistribution&quot;</span><span class="p">: [{ </span><span class="k">&quot;rating&quot;</span><span class="p">: </span><span class="n">10</span><span class="p">, </span><span class="k">&quot;count&quot;</span><span class="p">: </span><span class="n">3481</span><span class="p">, </span><span class="k">&quot;percent&quot;</span><span class="p">: </span><span class="n">63</span><span class="p"> }],</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;images&quot;</span><span class="p">: [ … </span><span class="n">61</span><span class="p"> photos ], </span><span class="k">&quot;rooms&quot;</span><span class="p">: [ … </span><span class="n">28</span><span class="p"> room types ],</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;reviews&quot;</span><span class="p">: [ … </span><span class="n">20</span><span class="p"> reviews ]</span></span
+        ><span class="ln"><span class="p">}</span></span></pre>
+    </div>
+  </div>
+</body></html>
