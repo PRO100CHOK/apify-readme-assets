@@ -1,0 +1,102 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:760px; }
+  body { background:#08090B; font-family:"Helvetica Neue", Arial, "Segoe UI", sans-serif;
+         -webkit-font-smoothing:antialiased; position:relative; overflow:hidden; }
+  .grid { position:absolute; inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+                     linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+    background-size:38px 38px; }
+  .glow { position:absolute; top:-190px; left:-170px; width:660px; height:560px;
+    background:radial-gradient(closest-side, #00D9B538, #00D9B500); }
+  .glow2 { position:absolute; top:230px; right:-220px; width:540px; height:480px;
+    background:radial-gradient(closest-side, #3D8BFF1E, #3D8BFF00); }
+  .wrap { position:relative; padding:44px 45px 46px; }
+
+  .eyebrow { display:flex; align-items:center; gap:11px; margin-bottom:22px; }
+  .dot { width:9px; height:9px; border-radius:50%; background:#00D9B5;
+         box-shadow:0 0 14px 3px #00D9B5A6; }
+  .eyebrow span { font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13px; font-weight:700; letter-spacing:.20em; color:#00D9B5; }
+  .eyebrow span em { font-style:normal; color:#6E7681; }
+
+  h1 { line-height:.94; letter-spacing:-.035em; font-weight:800; }
+  h1 div { font-size:59px; }
+  .l1 { color:#FFFFFF; } .l2 { color:#00D9B5; } .l3 { color:#6E7681; }
+
+  p.lede { margin-top:28px; font-size:17.5px; line-height:1.52; color:#C9CDD3; max-width:655px; }
+  p.lede b { color:#FFFFFF; font-weight:700; }
+  p.lede i { font-style:normal; color:#00D9B5; font-weight:700; }
+  p.lede u { text-decoration:none; color:#3D8BFF; font-weight:700; }
+
+  .badges { margin-top:30px; display:flex; align-items:center; gap:16px; }
+  .pill { border:1px solid #00D9B573; border-radius:999px; padding:9px 18px;
+    font-family:"Cascadia Mono", Consolas, monospace; font-size:12px; font-weight:700;
+    letter-spacing:.11em; color:#00D9B5; background:#00D9B512; }
+  .runs { font-family:"Cascadia Mono", Consolas, monospace; font-size:12px;
+    letter-spacing:.11em; color:#6E7681; }
+  .runs b { color:#E6E8EB; } .sep { color:#3A3F46; }
+
+  .term { margin-top:42px; border:1px solid #23262B; border-radius:12px;
+    background:#0C0E11; overflow:hidden; }
+  .bar { display:flex; align-items:center; gap:9px; padding:12px 16px;
+    border-bottom:1px solid #1B1E23; background:#101317; }
+  .b { width:11px; height:11px; border-radius:50%; }
+  .b1{background:#FF5F57} .b2{background:#FEBC2E} .b3{background:#28C840}
+  .path { margin-left:9px; font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:12.5px; letter-spacing:.05em; color:#6E7681; }
+  .live { margin-left:auto; display:flex; align-items:center; gap:6px;
+    border:1px solid rgba(40,200,64,.35); border-radius:999px; padding:4px 11px;
+    background:rgba(40,200,64,.08); font-family:"Cascadia Mono", Consolas, monospace;
+    font-size:10.5px; font-weight:700; letter-spacing:.11em; color:#28C840; }
+  .live .d { width:6px; height:6px; border-radius:50%; background:#28C840; }
+
+  pre { padding:18px 20px 20px; font-family:"Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size:13.2px; line-height:1.76; color:#C9CDD3; white-space:normal; }
+  /* every source line is its own block, so no stray blank rows */
+  .ln { display:block; white-space:pre; }
+  .hl { background:#00D9B51C; box-shadow:inset 3px 0 0 #00D9B5; margin:0 -20px;
+        padding:0 20px 0 17px; }
+  .c { color:#5A616B; } .k { color:#79C0FF; } .s { color:#7EE787; }
+  .n { color:#FFA657; } .p { color:#8B949E; }
+</style></head>
+<body>
+  <div class="grid"></div><div class="glow"></div><div class="glow2"></div>
+  <div class="wrap">
+    <div class="eyebrow"><div class="dot"></div>
+      <span>IMMOBILIENSCOUT24 <em>/</em> 130+ FIELDS PER LISTING</span></div>
+    <h1><div class="l1">German listings.</div><div class="l2">Phones &amp; e-mails.</div><div class="l3">By URL or city.</div></h1>
+    <p class="lede">Rentals, sales and commercial space from <b>immobilienscout24.de</b>: prices, all running costs, energy data, photos, <i>agent phone and Impressum</i> plus <u>e-mails from the agency's own website</u>.</p>
+    <div class="badges">
+      <div class="pill">$1.10 / 1,000 listings &bull; No login &bull; JSON, CSV, Excel</div><div class="sep">&bull;</div>
+      <div class="runs">RUNS ON <b>APIFY</b></div>
+    </div>
+    <div class="term">
+      <div class="bar">
+        <div class="b b1"></div><div class="b b2"></div><div class="b b3"></div>
+        <div class="path">~/immobilienscout24-scraper</div>
+        <div class="live"><div class="d"></div>LIVE</div>
+      </div>
+      <pre><span class="ln"><span class="p">{</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;id&quot;</span><span class="p">: </span><span class="s">&quot;170765214&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;title&quot;</span><span class="p">: </span><span class="s">&quot;Exklusive 3-Zimmer-Altbauwohnung nahe Ku&#x27;damm&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;price&quot;</span><span class="p">: </span><span class="n">3542.56</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;totalRent&quot;</span><span class="p">: </span><span class="n">4054.67</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;serviceCharge&quot;</span><span class="p">: </span><span class="n">512.11</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;depositMonths&quot;</span><span class="p">: </span><span class="n">3</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;livingSpace&quot;</span><span class="p">: </span><span class="n">136.2</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;rooms&quot;</span><span class="p">: </span><span class="n">3</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;energyEfficiencyClass&quot;</span><span class="p">: </span><span class="s">&quot;B&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;street&quot;</span><span class="p">: </span><span class="s">&quot;Fasanenstraße&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;zipCode&quot;</span><span class="p">: </span><span class="s">&quot;10719&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;city&quot;</span><span class="p">: </span><span class="s">&quot;Berlin&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;contactCompany&quot;</span><span class="p">: </span><span class="s">&quot;Immobilien-Braun Service GmbH&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;contactPhone&quot;</span><span class="p">: </span><span class="s">&quot;+49 30 31580238&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;contactEmail&quot;</span><span class="p">: </span><span class="s">&quot;b.franke@samuelbraun.com&quot;</span><span class="p">,</span></span
+        ><span class="ln hl"><span class="p">  </span><span class="k">&quot;agencyWebsite&quot;</span><span class="p">: </span><span class="s">&quot;http://www.samuelbraun.com&quot;</span><span class="p">,</span></span
+        ><span class="ln"><span class="p">  </span><span class="k">&quot;pictureCount&quot;</span><span class="p">: </span><span class="n">48</span></span
+        ><span class="ln"><span class="p">}</span></span></pre>
+    </div>
+  </div>
+</body></html>
