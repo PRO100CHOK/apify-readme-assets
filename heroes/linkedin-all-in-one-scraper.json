@@ -2,10 +2,10 @@
  "actor": "linkedin-all-in-one-scraper",
  "accent": "#0A66C2",
  "accent2": "#70B5F9",
- "eyebrow": ["LINKEDIN", "14 MODES"],
+ "eyebrow": ["LINKEDIN", "13 MODES"],
  "headline": ["EVERY PROFILE.", "EVERY FILTER.", "AS JSON."],
- "lede": "<b>Full profiles, people search, company employees, companies, posts, comments, reactions, jobs and the Ad Library</b> — fourteen modes in one Actor. <i>Every LinkedIn search and job filter</i>, e-mail finder with a status on every address. <u>No LinkedIn account, no cookies, no proxies to configure.</u>",
- "pill": "14 MODES * E-MAIL FINDER * NO COOKIES",
+ "lede": "<b>Full profiles, people search, company employees, companies, posts, comments, reactions, jobs and the Ad Library</b> — thirteen modes in one Actor. <i>Every LinkedIn search and job filter</i>, e-mail finder with a status on every address. <u>No LinkedIn account, no cookies, no proxies to configure.</u>",
+ "pill": "13 MODES * E-MAIL FINDER * NO COOKIES",
  "code": [
   "// scrapeType: \"profiles\" · profileScraperMode: \"fullWithEmail\"",
   "{",
